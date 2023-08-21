@@ -1,9 +1,9 @@
 import "@/styles/globals.css";
 import { Provider } from "react-redux";
-import { SessionProvider } from "next-auth/react";
 import { Toaster } from "react-hot-toast";
 import { AppProps } from "next/app";
 import store from "@/redux/store";
+import { NextUIProvider } from "@nextui-org/react";
 
 type ComponentWithLayout = AppProps["Component"] & {
   getLayout?: (page: JSX.Element) => JSX.Element;
@@ -14,10 +14,12 @@ export default function App({ Component, pageProps }: AppProps) {
   const getLayout = componentWithLayout.getLayout || ((page) => page);
   return (
     <>
-      <Provider store={store}>
-        <Toaster />
-        {getLayout(<Component {...pageProps} />)}
-      </Provider>
+      <NextUIProvider>
+        <Provider store={store}>
+          <Toaster />
+          {getLayout(<Component {...pageProps} />)}
+        </Provider>
+      </NextUIProvider>
     </>
   );
 }

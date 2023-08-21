@@ -3,8 +3,8 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="text-2xl font-bold">
-      <Button color="primary">Button</Button>
+    <div className="text-2xl font-bold mt-5">
+      <Button color="primary">Hero Section</Button>
     </div>
   );
 };

@@ -14,26 +14,38 @@ import {
   Avatar,
 } from "@nextui-org/react";
 
+import { FaPhoneFlip } from "react-icons/fa6";
+import { BsHandbagFill } from "react-icons/bs";
+
 const Navigation = () => {
   return (
-    <div className=" bg-[#444] flex justify-center">
+    <div className=" bg-[#1b2023] shadow-lg shadow-[#1415129c] flex py-4 justify-center">
       <Navbar maxWidth="xl" className="bg-transparent   ">
         <NavbarContent className="" justify="start">
           <NavbarBrand className="">
             <p className="font-fantasy text-xl logoTitle ">Pizza Prism</p>
           </NavbarBrand>
         </NavbarContent>
-        <NavbarContent className="  hidden sm:flex gap-4" justify="center">
+        <NavbarContent className="hidden sm:flex gap-6" justify="center">
+          <NavbarItem isActive>
+            <Link
+              href="#"
+              className="font-sans text-[15px] text-[#d1710c]"
+              aria-current="page"
+            >
+              Home
+            </Link>
+          </NavbarItem>
           <Dropdown>
             <NavbarItem>
               <DropdownTrigger>
                 <Button
                   disableRipple
-                  className="p-0 bg-transparent text-white data-[hover=true]:bg-transparent"
+                  className="p-0 bg-transparent text-[#d8d9d9] font-sans  text-[15px] data-[hover=true]:bg-transparent"
                   radius="sm"
                   variant="light"
                 >
-                  Features
+                  Menu
                 </Button>
               </DropdownTrigger>
             </NavbarItem>
@@ -48,13 +60,13 @@ const Navigation = () => {
                 key="autoscaling"
                 description="ACME scales apps to meet user demand, automagically, based on load."
               >
-                Autoscaling
+                Specials and Coupons
               </DropdownItem>
               <DropdownItem
                 key="usage_metrics"
                 description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
               >
-                Usage Metrics
+                Contact
               </DropdownItem>
               <DropdownItem
                 key="production_ready"
@@ -77,20 +89,58 @@ const Navigation = () => {
             </DropdownMenu>
           </Dropdown>
           <NavbarItem isActive>
-            <Link href="#" aria-current="page">
-              Customers
+            <Link
+              href="#"
+              className="text-[#d8d9d9] text-[15px]   font-sans font-[400]"
+            >
+              Specials and Coupons
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link className="text-white" href="#">
-              Integrations
+            <Link
+              href="#"
+              className="text-[#d8d9d9] text-[15px]   font-sans font-[400]"
+            >
+              Contact Us
             </Link>
           </NavbarItem>
         </NavbarContent>
-        <NavbarContent className="" justify="end">
-          <Dropdown>
+        <NavbarContent className="items-center gap-4 flex" justify="end">
+          <NavbarItem className="">
+            <Link
+              href="#"
+              className="font-sans border-2 p-2 rounded-full border-[#dd9710] relative text-[15px] text-[#dd9710]"
+              aria-current="page"
+            >
+              <BsHandbagFill size={20} />
+              <span className="absolute -top-1 font-semibold py-0.5 bg-white px-1.5 rounded-full text-xs -right-1.5">
+                2
+              </span>
+            </Link>
+          </NavbarItem>
+          <NavbarItem className="">
+            <Link
+              href="#"
+              className="font-sans border-2 p-2 rounded-full border-[#dd9710] text-[15px] text-[#dd9710]"
+              aria-current="page"
+            >
+              <FaPhoneFlip size={20} />
+            </Link>
+          </NavbarItem>
+          <Dropdown type="menu">
             <DropdownTrigger>
-              <Button variant="bordered">Open Menu</Button>
+              <Button
+                isIconOnly
+                color="default"
+                radius="full"
+                aria-label="Like"
+              >
+                <Avatar
+                  isBordered
+                  color="secondary"
+                  src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                />
+              </Button>
             </DropdownTrigger>
             <DropdownMenu
               aria-label="Action event example"
