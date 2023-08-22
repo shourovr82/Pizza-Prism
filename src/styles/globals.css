@@ -25,3 +25,11 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
+.bannerImg {
+  background-image: url('../Assets/Homepage/bannerImg.jpeg');
+  background-size: cover;
+  height: 93vh;
+
+}
