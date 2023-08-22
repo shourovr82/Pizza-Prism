@@ -1,4 +1,5 @@
 import RootLayout from "@/components/Layouts/RootLayout";
+import DiscoverMenuSection from "@/components/Ui/Home/DiscoverMenuSection";
 import HeroSection from "@/components/Ui/Home/HeroSection";
 import Head from "next/head";
 import React from "react";
@@ -19,6 +20,9 @@ const HomePage: ExtendedHomePage = () => {
       {/* main section */}
       <>
         <HeroSection />
+      </>
+      <>
+        <DiscoverMenuSection />
       </>
     </>
   );

@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Barriecito&family=Space+Grotesk:wght@400;500;600;700&family=Varela+Round&family=Viga&family=Ysabeau+Infant:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Barriecito&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Varela+Round&family=Viga&family=Ysabeau+Infant:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
 
 /* font-family: 'ABeeZee', sans-serif;
 font-family: 'Barriecito', cursive;
@@ -13,7 +13,7 @@ font-family: 'Ysabeau Infant', sans-serif; */
 
 body {
   background-color: #fffdf9;
-  /* font-family: fantasy; */
+  font-family: 'Outfit', sans-serif;
 }
 
 
@@ -29,7 +29,66 @@ body {
 
 .bannerImg {
   background-image: url('../Assets/Homepage/bannerImg.jpeg');
-  background-size: cover;
-  height: 93vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 88vh;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 
+
+}
+
+.neon-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9rem;
+  height: 3rem;
+  border-radius: 25px;
+  background-image: linear-gradient(to right, #f78708, #f8be12);
+  text-decoration: none;
+  animation: neon-loader 1s infinite alternate;
+  transition: .5s all;
+}
+
+
+.neon-loader:hover {
+  background-color: #f8be12 !important;
+  animation-play-state: paused;
+  box-shadow: 0 0 10px #f78708,
+    0 0 30px #f8be12,
+    0 0 40px #f78708;
+}
+
+.responsive-section {
+  width: 100%;
+  /* Full width */
+  max-width: 1232px;
+  /* Max width */
+  margin: 0 auto;
+  /* Center horizontally */
+  /* Background color */
+  box-sizing: border-box;
+  /* Include padding and border in element's total width */
+}
+
+/* Media query for medium (md) breakpoint */
+@media (max-width: 768px) {
+  .responsive-section {
+    max-width: 91%;
+  }
+}
+
+/* Media query for large (lg) breakpoint */
+@media (max-width: 1024px) {
+  .responsive-section {
+    max-width: 95%;
+  }
+}
+
+/* Media query for extra large (xl) breakpoint */
+@media (max-width: 1280px) {
+  .responsive-section {
+    max-width: 96%;
+  }
 }
