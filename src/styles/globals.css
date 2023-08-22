@@ -51,9 +51,31 @@ body {
   transition: .5s all;
 }
 
-
 .neon-loader:hover {
   background-color: #f8be12 !important;
+  animation-play-state: paused;
+  box-shadow: 0 0 10px #f78708,
+    0 0 30px #f8be12,
+    0 0 40px #f78708;
+}
+
+.neon-view-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  border-radius: 25px;
+  background-image: linear-gradient(to right, #f78308, #f78308);
+  text-decoration: none;
+  animation: neon-loader 1s infinite alternate;
+  transition: .5s all;
+}
+
+
+
+
+.neon-view-all:hover {
+  background-color: #f78308 !important;
   animation-play-state: paused;
   box-shadow: 0 0 10px #f78708,
     0 0 30px #f8be12,
