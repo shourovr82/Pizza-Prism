@@ -33,3 +33,58 @@ body {
   height: 93vh;
 
 }
+
+.neon-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 9rem;
+  height: 3rem;
+  border-radius: 25px;
+  background-image: linear-gradient(to right, #f78708, #f8be12);
+  text-decoration: none;
+  animation: neon-loader 1s infinite alternate;
+  transition: .5s all;
+}
+
+
+.neon-loader:hover {
+  background-color: #f8be12 !important;
+  animation-play-state: paused;
+  box-shadow: 0 0 10px #f78708,
+    0 0 30px #f8be12,
+    0 0 40px #f78708;
+}
+
+.responsive-section {
+  width: 100%;
+  /* Full width */
+  max-width: 1232px;
+  /* Max width */
+  margin: 0 auto;
+  /* Center horizontally */
+  /* Background color */
+  box-sizing: border-box;
+  /* Include padding and border in element's total width */
+}
+
+/* Media query for medium (md) breakpoint */
+@media (max-width: 768px) {
+  .responsive-section {
+    max-width: 91%;
+  }
+}
+
+/* Media query for large (lg) breakpoint */
+@media (max-width: 1024px) {
+  .responsive-section {
+    max-width: 95%;
+  }
+}
+
+/* Media query for extra large (xl) breakpoint */
+@media (max-width: 1280px) {
+  .responsive-section {
+    max-width: 96%;
+  }
+}
