@@ -20,7 +20,7 @@ import { BsHandbagFill } from "react-icons/bs";
 
 const Navigation = () => {
   return (
-    <div className=" bg-[#1b2023] shadow-lg sticky top-0 z-30 shadow-[#1415129c] flex  justify-center">
+    <div className=" bg-[#15181b] shadow-xl sticky top-0 z-30 shadow-[#1415129c] flex  justify-center">
       <Navbar maxWidth="xl" className="bg-transparent   ">
         <NavbarContent className="" justify="start">
           <NavbarBrand className="">
