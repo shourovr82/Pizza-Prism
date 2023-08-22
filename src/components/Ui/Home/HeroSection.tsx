@@ -1,10 +1,10 @@
-import { Button } from "@nextui-org/react";
-import React from "react";
+import bannerPhoto from "@/Assets/Homepage/bannerImg.jpeg";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <div className="text-2xl font-bold mt-5">
-      <Button color="primary">Hero Section</Button>
+    <div className="bannerImg">
+      <div></div>
     </div>
   );
 };
