@@ -16,30 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <AnimatePresence mode="wait">
-        <motion.div
-          key={Math.random()}
-          initial="initialState"
-          animate="animateState"
-          exit="exitState"
-          transition={{
-            duration: 0.75,
-          }}
-          variants={{
-            initialState: {
-              opacity: 0,
-              clipPath: " circle(18.2% at 50% 50%)",
-            },
-            animateState: {
-              opacity: 1,
-              // clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)",
-              clipPath: " circle(100% at 50% 50%)",
-            },
-            exitState: {
-              opacity: 0,
-              clipPath: "circle(10% at 100% 100%)",
-            },
-          }}
-        >
+        <motion.div key={Math.random()}>
           <NextUIProvider>
             <Provider store={store}>
               <Toaster />

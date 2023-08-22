@@ -12,7 +12,7 @@ font-family: 'Viga', sans-serif;
 font-family: 'Ysabeau Infant', sans-serif; */
 
 body {
-  background-color: #fffdf9;
+  background-color: #fffbf6;
   font-family: 'Outfit', sans-serif;
 }
 
@@ -31,6 +31,7 @@ body {
   background-image: url('../Assets/Homepage/bannerImg.jpeg');
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   height: 88vh;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
@@ -42,7 +43,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 9rem;
   height: 3rem;
   border-radius: 25px;
   background-image: linear-gradient(to right, #f78708, #f8be12);
