@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Barriecito&family=Space+Grotesk:wght@400;500;600;700&family=Varela+Round&family=Viga&family=Ysabeau+Infant:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Barriecito&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Varela+Round&family=Viga&family=Ysabeau+Infant:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
 
 /* font-family: 'ABeeZee', sans-serif;
 font-family: 'Barriecito', cursive;
@@ -13,7 +13,7 @@ font-family: 'Ysabeau Infant', sans-serif; */
 
 body {
   background-color: #fffdf9;
-  /* font-family: fantasy; */
+  font-family: 'Outfit', sans-serif;
 }
 
 
@@ -29,8 +29,12 @@ body {
 
 .bannerImg {
   background-image: url('../Assets/Homepage/bannerImg.jpeg');
-  background-size: cover;
-  height: 93vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 88vh;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+
 
 }
 

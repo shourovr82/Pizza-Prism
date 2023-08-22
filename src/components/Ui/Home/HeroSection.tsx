@@ -1,7 +1,7 @@
 import { IoPizza } from "react-icons/io5";
 const HeroSection = () => {
   return (
-    <div className="bannerImg flex justify-center">
+    <div className="bannerImg select-none flex justify-center">
       <div className="responsive-section ">
         <div className="  flex flex-col space-y-10 items-center h-full justify-center w-[50%]">
           <div className=" w-full">
@@ -12,7 +12,7 @@ const HeroSection = () => {
             </h1>
           </div>
           <div className="space-y-10">
-            <p className="text-[#c5c6c6] font-Viga ">
+            <p className="text-[#c5c6c6]  ">
               Come and get some work done at our family friendly <br /> co work
               space and private offices with full kitchen while your kids play
               at our playground
