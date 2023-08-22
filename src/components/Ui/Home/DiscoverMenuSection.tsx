@@ -38,210 +38,69 @@ const DiscoverMenuSection = () => {
           className="grid mt-14 grid-cols-4 gap-5 font-sans
 "
         >
-          <div className=" shadow-xl rounded-xl py-5  p-2 text-center">
-            <div className="flex justify-center">
-              <Image src={photo} width={200} height={200} alt="" />
-            </div>
+          {["1", "2", "3", "4"].map((item) => (
+            <div
+              key={Math.random()}
+              className=" shadow-xl rounded-xl py-5  p-2 text-center"
+            >
+              <div className="flex justify-center">
+                <Image src={photo} width={200} height={200} alt="" />
+              </div>
 
-            <div className="space-y-3">
-              <h1 className="text-[#f78914] text-2xl  font-medium">
-                Pepperoni Pizza
-              </h1>
-              <p className="text-xs px-5 text-[#97948f]">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptate, minus? Non maiores odit ea corrupti
-              </p>
-            </div>
+              <div className="space-y-3">
+                <h1 className="text-[#f78914] text-2xl  font-medium">
+                  Pepperoni Pizza
+                </h1>
+                <p className="text-xs px-5 text-[#97948f]">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Voluptate, minus? Non maiores odit ea corrupti
+                </p>
+              </div>
 
-            <div className="flex mt-3 justify-evenly text-xs">
-              <p className="bg-black rounded-full px-2.5 text-white cursor-pointer duration-300 transition-all ease-in-out py-1">
-                30cm
-              </p>
-              <p className="hover:bg-black rounded-full px-2.5 hover:text-white cursor-pointer duration-300 transition-all ease-in-out py-1">
-                40cm
-              </p>
-              <p className="hover:bg-black rounded-full px-2.5 hover:text-white cursor-pointer duration-300 transition-all ease-in-out py-1">
-                50cm
-              </p>
-            </div>
-            {/* price , cart order */}
-            <div className="space-y-3 mt-3">
-              <div className="flex items-center gap-3  justify-around">
-                <h2 className="text-2xl text-[#f78d1e] font-YsabeauInfant font-semibold">
-                  $32
-                </h2>
-                <div className="flex  items-center gap-3">
-                  <button className="bg-[#f8b713] p-1 rounded-full text-white ">
-                    <HiMinus />
-                  </button>
-                  <span className="font-semibold">1</span>
-                  <button className="bg-[#f8b713] p-1 rounded-full text-white">
-                    <AiOutlinePlus />
-                  </button>
+              <div className="flex mt-3 justify-evenly text-xs">
+                <p className="bg-black rounded-full px-2.5 text-white cursor-pointer duration-300 transition-all ease-in-out py-1">
+                  30cm
+                </p>
+                <p className="hover:bg-black rounded-full px-2.5 hover:text-white cursor-pointer duration-300 transition-all ease-in-out py-1">
+                  40cm
+                </p>
+                <p className="hover:bg-black rounded-full px-2.5 hover:text-white cursor-pointer duration-300 transition-all ease-in-out py-1">
+                  50cm
+                </p>
+              </div>
+              {/* price , cart order */}
+              <div className="space-y-3 mt-3">
+                <div className="flex items-center gap-3  justify-around">
+                  <h2 className="text-2xl text-[#f78d1e] font-YsabeauInfant font-semibold">
+                    $32
+                  </h2>
+                  <div className="flex  items-center gap-3">
+                    <button className="bg-[#f8b713] p-1 rounded-full text-white ">
+                      <HiMinus />
+                    </button>
+                    <span className="font-semibold">1</span>
+                    <button className="bg-[#f8b713] p-1 rounded-full text-white">
+                      <AiOutlinePlus />
+                    </button>
+                  </div>
+                </div>
+                <div className="pt-2">
+                  <Button className="neon-loader w-[90%] mx-auto ">
+                    <span className="text-white font-semibold text-normal">
+                      Order Now
+                    </span>
+                  </Button>
                 </div>
               </div>
-              <div className="pt-2">
-                <Button className="neon-loader w-[90%] mx-auto ">
-                  <span className="text-white font-semibold text-normal">
-                    Order Now
-                  </span>
-                </Button>
-              </div>
             </div>
-          </div>
-          <div className=" shadow-xl rounded-xl py-5  p-2 text-center">
-            <div className="flex justify-center">
-              <Image src={photo} width={200} height={200} alt="" />
-            </div>
-
-            <div className="space-y-3">
-              <h1 className="text-[#f78914] text-2xl  font-medium">
-                Pepperoni Pizza
-              </h1>
-              <p className="text-xs px-5 text-[#97948f]">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptate, minus? Non maiores odit ea corrupti
-              </p>
-            </div>
-
-            <div className="flex mt-3 justify-evenly text-xs">
-              <p className="bg-black rounded-full px-2.5 text-white cursor-pointer duration-300 transition-all ease-in-out py-1">
-                30cm
-              </p>
-              <p className="hover:bg-black rounded-full px-2.5 hover:text-white cursor-pointer duration-300 transition-all ease-in-out py-1">
-                40cm
-              </p>
-              <p className="hover:bg-black rounded-full px-2.5 hover:text-white cursor-pointer duration-300 transition-all ease-in-out py-1">
-                50cm
-              </p>
-            </div>
-            {/* price , cart order */}
-            <div className="space-y-3 mt-3">
-              <div className="flex items-center gap-3  justify-around">
-                <h2 className="text-2xl text-[#f78d1e] font-YsabeauInfant font-semibold">
-                  $32
-                </h2>
-                <div className="flex  items-center gap-3">
-                  <button className="bg-[#f8b713] p-1 rounded-full text-white ">
-                    <HiMinus />
-                  </button>
-                  <span className="font-semibold">1</span>
-                  <button className="bg-[#f8b713] p-1 rounded-full text-white">
-                    <AiOutlinePlus />
-                  </button>
-                </div>
-              </div>
-              <div className="pt-2">
-                <Button className="neon-loader w-[90%] mx-auto ">
-                  <span className="text-white font-semibold text-normal">
-                    Order Now
-                  </span>
-                </Button>
-              </div>
-            </div>
-          </div>{" "}
-          <div className=" shadow-xl rounded-xl py-5  p-2 text-center">
-            <div className="flex justify-center">
-              <Image src={photo} width={200} height={200} alt="" />
-            </div>
-
-            <div className="space-y-3">
-              <h1 className="text-[#f78914] text-2xl  font-medium">
-                Pepperoni Pizza
-              </h1>
-              <p className="text-xs px-5 text-[#97948f]">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptate, minus? Non maiores odit ea corrupti
-              </p>
-            </div>
-
-            <div className="flex mt-3 justify-evenly text-xs">
-              <p className="bg-black rounded-full px-2.5 text-white cursor-pointer duration-300 transition-all ease-in-out py-1">
-                30cm
-              </p>
-              <p className="hover:bg-black rounded-full px-2.5 hover:text-white cursor-pointer duration-300 transition-all ease-in-out py-1">
-                40cm
-              </p>
-              <p className="hover:bg-black rounded-full px-2.5 hover:text-white cursor-pointer duration-300 transition-all ease-in-out py-1">
-                50cm
-              </p>
-            </div>
-            {/* price , cart order */}
-            <div className="space-y-3 mt-3">
-              <div className="flex items-center gap-3  justify-around">
-                <h2 className="text-2xl text-[#f78d1e] font-YsabeauInfant font-semibold">
-                  $32
-                </h2>
-                <div className="flex  items-center gap-3">
-                  <button className="bg-[#f8b713] p-1 rounded-full text-white ">
-                    <HiMinus />
-                  </button>
-                  <span className="font-semibold">1</span>
-                  <button className="bg-[#f8b713] p-1 rounded-full text-white">
-                    <AiOutlinePlus />
-                  </button>
-                </div>
-              </div>
-              <div className="pt-2">
-                <Button className="neon-loader w-[90%] mx-auto ">
-                  <span className="text-white font-semibold text-normal">
-                    Order Now
-                  </span>
-                </Button>
-              </div>
-            </div>
-          </div>{" "}
-          <div className=" shadow-xl rounded-xl py-5  p-2 text-center">
-            <div className="flex justify-center">
-              <Image src={photo} width={200} height={200} alt="" />
-            </div>
-
-            <div className="space-y-3">
-              <h1 className="text-[#f78914] text-2xl  font-medium">
-                Pepperoni Pizza
-              </h1>
-              <p className="text-xs px-5 text-[#97948f]">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptate, minus? Non maiores odit ea corrupti
-              </p>
-            </div>
-
-            <div className="flex mt-3 justify-evenly text-xs">
-              <p className="bg-black rounded-full px-2.5 text-white cursor-pointer duration-300 transition-all ease-in-out py-1">
-                30cm
-              </p>
-              <p className="hover:bg-black rounded-full px-2.5 hover:text-white cursor-pointer duration-300 transition-all ease-in-out py-1">
-                40cm
-              </p>
-              <p className="hover:bg-black rounded-full px-2.5 hover:text-white cursor-pointer duration-300 transition-all ease-in-out py-1">
-                50cm
-              </p>
-            </div>
-            {/* price , cart order */}
-            <div className="space-y-3 mt-3">
-              <div className="flex items-center gap-3  justify-around">
-                <h2 className="text-2xl text-[#f78d1e] font-YsabeauInfant font-semibold">
-                  $32
-                </h2>
-                <div className="flex  items-center gap-3">
-                  <button className="bg-[#f8b713] p-1 rounded-full text-white ">
-                    <HiMinus />
-                  </button>
-                  <span className="font-semibold">1</span>
-                  <button className="bg-[#f8b713] p-1 rounded-full text-white">
-                    <AiOutlinePlus />
-                  </button>
-                </div>
-              </div>
-              <div className="pt-2">
-                <Button className="neon-loader w-[90%] mx-auto ">
-                  <span className="text-white font-semibold text-normal">
-                    Order Now
-                  </span>
-                </Button>
-              </div>
-            </div>
-          </div>
+          ))}
+        </div>
+        <div className="mt-16 flex justify-center">
+          <Button className="neon-view-all w-[9rem]">
+            <span className="text-white font-semibold text-normal">
+              View All
+            </span>
+          </Button>
         </div>
       </div>
     </div>
