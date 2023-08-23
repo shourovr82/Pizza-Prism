@@ -17,13 +17,13 @@ const DiscoverMenuSection = () => {
     "Kids",
   ];
   return (
-    <div className="pt-20 responsive-section">
+    <div className="max-md:mt-10 pt-20 responsive-section">
       <div>
         <div className="flex flex-col items-center justify-center text-center">
           <h3 className="text-[#f9a246] font-semibold uppercase">Our menu</h3>
           <h2 className="text-3xl font-bold">Discover Our Menu</h2>
         </div>
-        <div className="flex flex-wrap  mt-10 gap-5 w-[60%] mx-auto justify-center">
+        <div className="flex flex-wrap  mt-10 gap-5 max-md:w-[75%] xl:w-[60%] mx-auto justify-center">
           {menus?.map((menuItem) => (
             <button
               key={Math.random()}
@@ -35,7 +35,7 @@ const DiscoverMenuSection = () => {
         </div>
         {/* items */}
         <div
-          className="grid mt-14 grid-cols-4 gap-5 font-sans
+          className="grid mt-14 max-md:grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5 font-sans
 "
         >
           {["1", "2", "3", "4"].map((item) => (
