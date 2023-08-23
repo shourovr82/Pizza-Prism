@@ -105,6 +105,14 @@ const Navigation = () => {
               Contact Us
             </Link>
           </NavbarItem>
+          <NavbarItem>
+            <Link
+              href="/dashboard"
+              className="text-[#d8d9d9] text-[15px]   font-sans font-[400]"
+            >
+              Dashboard
+            </Link>
+          </NavbarItem>
         </NavbarContent>
         <NavbarContent className="items-center gap-4 flex" justify="end">
           <NavbarItem className="">

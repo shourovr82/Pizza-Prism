@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Barriecito&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Varela+Round&family=Viga&family=Ysabeau+Infant:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Barriecito&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Varela+Round&family=Viga&family=Ysabeau+Infant:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
 
 /* font-family: 'ABeeZee', sans-serif;
 font-family: 'Barriecito', cursive;
@@ -13,30 +13,24 @@ font-family: 'Ysabeau Infant', sans-serif; */
 
 body {
   background-color: #fffbf6;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
-
-
 .logoTitle {
-
   text-transform: capitalize;
   background: linear-gradient(to right, #eb7e09 0%, #f6c112 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-
 .bannerImg {
-  background-image: url('../Assets/Homepage/bannerImg.jpeg');
+  background-image: url("../Assets/Homepage/bannerImg.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 88vh;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-
-
 }
 
 .neon-loader {
@@ -48,15 +42,13 @@ body {
   background-image: linear-gradient(to right, #f78708, #f8be12);
   text-decoration: none;
   animation: neon-loader 1s infinite alternate;
-  transition: .5s all;
+  transition: 0.5s all;
 }
 
 .neon-loader:hover {
   background-color: #f8be12 !important;
   animation-play-state: paused;
-  box-shadow: 0 0 10px #f78708,
-    0 0 30px #f8be12,
-    0 0 40px #f78708;
+  box-shadow: 0 0 10px #f78708, 0 0 30px #f8be12, 0 0 40px #f78708;
 }
 
 .neon-view-all {
@@ -68,18 +60,13 @@ body {
   background-image: linear-gradient(to right, #f78308, #f78308);
   text-decoration: none;
   animation: neon-loader 1s infinite alternate;
-  transition: .5s all;
+  transition: 0.5s all;
 }
-
-
-
 
 .neon-view-all:hover {
   background-color: #f78308 !important;
   animation-play-state: paused;
-  box-shadow: 0 0 10px #f78708,
-    0 0 30px #f8be12,
-    0 0 40px #f78708;
+  box-shadow: 0 0 10px #f78708, 0 0 30px #f8be12, 0 0 40px #f78708;
 }
 
 .responsive-section {
@@ -114,3 +101,5 @@ body {
     max-width: 96%;
   }
 }
+
+
