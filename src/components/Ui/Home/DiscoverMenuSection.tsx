@@ -17,7 +17,7 @@ const DiscoverMenuSection = () => {
     "Kids",
   ];
   return (
-    <div className="max-md:mt-10 pt-20 responsive-section">
+    <div className="max-md:mt-10 py-20 responsive-section">
       <div>
         <div className="flex flex-col items-center justify-center text-center">
           <h3 className="text-[#f9a246] font-semibold uppercase">Our menu</h3>
