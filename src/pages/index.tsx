@@ -43,7 +43,7 @@ const HomePage: ExtendedHomePage = () => {
           },
         }}
       >
-        <div className="bannerImg  select-none  flex justify-center">
+        <div className="bannerImg   select-none  flex justify-center">
           <HeroSection />
         </div>
       </motion.div>
