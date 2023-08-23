@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import { Dialog, Menu, Transition } from "@headlessui/react";
+import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
   BellIcon,
@@ -17,14 +17,60 @@ import {
   MagnifyingGlassIcon,
 } from "@heroicons/react/20/solid";
 import Image from "next/image";
+import { Navbar, NavbarBrand } from "@nextui-org/react";
+import CardSection from "@/components/dashboard/cardSection";
+import UserSection from "@/components/dashboard/userSection";
+import OrderChart from "@/components/dashboard/orderChart";
 
 const navigation = [
   { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-  { name: "Team", href: "#", icon: UsersIcon, current: false },
-  { name: "Projects", href: "#", icon: FolderIcon, current: false },
-  { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
-  { name: "Documents", href: "#", icon: DocumentDuplicateIcon, current: false },
-  { name: "Reports", href: "#", icon: ChartPieIcon, current: false },
+  {
+    name: "Customer",
+    href: "#",
+    icon: UsersIcon,
+    current: false,
+    children: [{ name: "Order List", href: "/orders/d" }],
+  },
+  {
+    name: "Purchase",
+    href: "#",
+    icon: FolderIcon,
+    current: false,
+    children: [
+      { name: "Purchase List", href: "/orders/d" },
+      { name: "Supplier", href: "/orders/d" },
+      { name: "Report", href: "/orders/d" },
+    ],
+  },
+  {
+    name: "Sales",
+    href: "#",
+    icon: CalendarIcon,
+    current: false,
+    children: [
+      { name: "Order List", href: "/orders/d" },
+      { name: "Customer List", href: "/orders/d" },
+    ],
+  },
+  {
+    name: "Accounts",
+    href: "#",
+    icon: DocumentDuplicateIcon,
+    current: false,
+    children: [
+      { name: "Purchase List", href: "/orders/d" },
+      { name: "Sales List", href: "/orders/d" },
+      { name: "Order List", href: "/orders/d" },
+    ],
+  },
+  {
+    name: "Inventory",
+    href: "#",
+    icon: DocumentDuplicateIcon,
+    current: false,
+    children: [{ name: "Inventory List", href: "/orders/d" }],
+  },
+  { name: "Others", href: "#", icon: ChartPieIcon, current: false },
 ];
 const teams = [
   { id: 1, name: "Heroicons", href: "#", initial: "H", current: false },
@@ -107,15 +153,15 @@ export default function DashboradHomePage() {
                     </div>
                   </Transition.Child>
                   {/* Sidebar component, swap this element with another sidebar if you like */}
-                  <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gradient-to-r from-black via-yellow-400 to-yellow-200 px-6 pb-4">
+                  <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gradient-to-b from-gray-900  to-gray-700 px-6 pb-4">
                     <div className="flex h-16 shrink-0 items-center">
-                      <Image
-                        className="h-8 w-auto"
-                        src=""
-                        alt="Your Company"
-                        width={100}
-                        height={100}
-                      />
+                      <Navbar className="bg-transparent">
+                        <NavbarBrand className="">
+                          <p className="font-fantasy text-xl logoTitle ">
+                            Pizza Prism
+                          </p>
+                        </NavbarBrand>
+                      </Navbar>
                     </div>
                     <nav className="flex flex-1 flex-col">
                       <ul role="list" className="flex flex-1 flex-col gap-y-7">
@@ -172,7 +218,7 @@ export default function DashboradHomePage() {
                             ))}
                           </ul>
                         </li>
-                        <li className="mt-auto">
+                        {/* <li className="mt-auto">
                           <a
                             href="#"
                             className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
@@ -183,7 +229,7 @@ export default function DashboradHomePage() {
                             />
                             Settings
                           </a>
-                        </li>
+                        </li> */}
                       </ul>
                     </nav>
                   </div>
@@ -194,31 +240,29 @@ export default function DashboradHomePage() {
         </Transition.Root>
 
         {/* Static sidebar for desktop */}
-        <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-72 lg:flex-col">
+        <div className="hidden lg:fixed lg:inset-y-0 lg:z-50 lg:flex lg:w-40 lg:flex-col bg-white shadow-md ">
           {/* Sidebar component, swap this element with another sidebar if you like */}
-          <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gradient-to-b from-gray-900  to-gray-700 px-6 pb-4">
-            <div className="flex h-16 shrink-0 items-center">
-              <Image
-                className="h-8 w-auto"
-                src=""
-                alt="Your Company"
-                width={100}
-                height={100}
-              />
+          <div className="flex grow flex-col gap-y-5 overflow-y-auto bg-gradient-to-b px-6 pb-4 bg-white shadow-md shadow-gray-300 rounded-r-lg">
+            <div className="flex h-16 shrink-0 items-center ">
+              <Navbar className="bg-transparent">
+                <NavbarBrand className="">
+                  <p className="font-fantasy text-xl logoTitle ">Pizza Prism</p>
+                </NavbarBrand>
+              </Navbar>
             </div>
-            <nav className="flex flex-1 flex-col">
+            <nav className="flex flex-1 flex-col  ">
               <ul role="list" className="flex flex-1 flex-col gap-y-7">
                 <li>
-                  <ul role="list" className="-mx-2 space-y-1">
+                  <ul role="list" className="-mx-2 space-y-1 ">
                     {navigation.map((item) => (
                       <li key={item.name}>
                         <a
                           href={item.href}
                           className={classNames(
                             item.current
-                              ? "bg-indigo-700 text-white"
-                              : "text-indigo-200 hover:text-white hover:bg-indigo-700",
-                            "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
+                              ? " text-blue-400 bg-indigo-50 "
+                              : "text-black  hover:bg-indigo-50 ",
+                            "group flex gap-x-3 rounded-md p-2 text-sm leading-6  "
                           )}
                         >
                           <item.icon
@@ -236,32 +280,8 @@ export default function DashboradHomePage() {
                     ))}
                   </ul>
                 </li>
-                <li>
-                  <div className="text-xs font-semibold leading-6 text-indigo-200">
-                    Your teams
-                  </div>
-                  <ul role="list" className="-mx-2 mt-2 space-y-1">
-                    {teams.map((team) => (
-                      <li key={team.name}>
-                        <a
-                          href={team.href}
-                          className={classNames(
-                            team.current
-                              ? "bg-indigo-700 text-white"
-                              : "text-indigo-200 hover:text-white hover:bg-indigo-700",
-                            "group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold"
-                          )}
-                        >
-                          <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-lg border border-indigo-400 bg-indigo-500 text-[0.625rem] font-medium text-white">
-                            {team.initial}
-                          </span>
-                          <span className="truncate">{team.name}</span>
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </li>
-                <li className="mt-auto">
+
+                {/* <li className="mt-auto">
                   <a
                     href="#"
                     className="group -mx-2 flex gap-x-3 rounded-md p-2 text-sm font-semibold leading-6 text-indigo-200 hover:bg-indigo-700 hover:text-white"
@@ -272,14 +292,14 @@ export default function DashboradHomePage() {
                     />
                     Settings
                   </a>
-                </li>
+                </li> */}
               </ul>
             </nav>
           </div>
         </div>
 
-        <div className="lg:pl-72">
-          <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
+        <div className="lg:pl-40 relative">
+          <div className=" absolute right-0 lg:w-[450px] w-full lg:rounded-3xl bg-white lg:m-4 top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8  ">
             <button
               type="button"
               className="-m-2.5 p-2.5 text-gray-700 lg:hidden"
@@ -290,12 +310,12 @@ export default function DashboradHomePage() {
             </button>
 
             {/* Separator */}
-            <div
-              className="h-6 w-px bg-gray-900/10 lg:hidden"
+            {/* <div
+              className="h-6 w-px bg-gray-900/10 lg:hidden "
               aria-hidden="true"
-            />
+            /> */}
 
-            <div className="flex flex-1 gap-x-4 self-stretch lg:gap-x-6">
+            <div className="flex flex-1 gap-x-4 self-stretch lg:gap-x-6 ">
               <form className="relative flex flex-1" action="#" method="GET">
                 <label htmlFor="search-field" className="sr-only">
                   Search
@@ -306,35 +326,37 @@ export default function DashboradHomePage() {
                 />
                 <input
                   id="search-field"
-                  className="block h-full w-full border-0 py-0 pl-8 pr-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm"
-                  placeholder="Search..."
+                  className="block h-full w-full border-0 py-0 pl-8 pr-0 text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm animate-fade-in opacity-100"
+                  placeholder="Search your order"
                   type="search"
                   name="search"
                 />
               </form>
               <div className="flex items-center gap-x-4 lg:gap-x-6">
-                <button
+                {/* <button
                   type="button"
                   className="-m-2.5 p-2.5 text-gray-400 hover:text-gray-500"
                 >
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
-                </button>
+                </button> */}
 
                 {/* Separator */}
-                <div
+                {/* <div
                   className="hidden lg:block lg:h-6 lg:w-px lg:bg-gray-900/10"
                   aria-hidden="true"
-                />
+                /> */}
 
                 {/* Profile dropdown */}
-                <Menu as="div" className="relative">
+                {/* <Menu as="div" className="relative">
                   <Menu.Button className="-m-1.5 flex items-center p-1.5">
                     <span className="sr-only">Open user menu</span>
-                    <img
+                    <Image
                       className="h-8 w-8 rounded-full bg-gray-50"
-                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                      src=""
                       alt=""
+                      width={100}
+                      height={100}
                     />
                     <span className="hidden lg:flex lg:items-center">
                       <span
@@ -376,13 +398,18 @@ export default function DashboradHomePage() {
                       ))}
                     </Menu.Items>
                   </Transition>
-                </Menu>
+                </Menu> */}
               </div>
             </div>
           </div>
 
-          <main className="py-10">
-            <div className="px-4 sm:px-6 lg:px-8">{/* Your content */}</div>
+          {/* Main Layout for Dashboard */}
+          <main className="py-10 bg-[#FAFAFA] h-screen">
+            <div className="px-4 sm:px-6 lg:px-8">
+              <UserSection />
+              <CardSection />
+              <OrderChart />
+            </div>
           </main>
         </div>
       </div>
