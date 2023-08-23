@@ -4,6 +4,7 @@ import HeroSection from "@/components/Ui/Home/HeroSection";
 import Head from "next/head";
 import { motion } from "framer-motion";
 import OurStory from "@/components/Ui/Home/OurStory";
+import CustomersSays from "@/components/Ui/Home/CustomersSays";
 
 interface ExtendedHomePage extends React.FC {
   getLayout: (page: JSX.Element) => JSX.Element;
@@ -50,9 +51,12 @@ const HomePage: ExtendedHomePage = () => {
       <>
         <DiscoverMenuSection />
       </>
-      <>
+      <div className="bg-[#f3f2f2]">
         <OurStory />
-      </>
+      </div>
+      <div className="">
+        <CustomersSays />
+      </div>
     </>
   );
 };
