@@ -13,7 +13,7 @@ font-family: 'Ysabeau Infant', sans-serif; */
 
 body {
   background-color: #fffbf6;
-  font-family: "Outfit", sans-serif;
+  /* font-family: sans-serif; */
 }
 
 .logoTitle {
@@ -28,7 +28,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 88vh;
+  height: 600px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
@@ -102,4 +102,22 @@ body {
   }
 }
 
+.reservationBg {
+  background-image: url('../Assets//Homepage/pizzaa.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
 
+/* reservation */
+.book-now-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-image: linear-gradient(to right, #f78708, #f8be12);
+  text-decoration: none;
+  animation: neon-loader 1s infinite alternate;
+  transition: 0.5s all;
+}

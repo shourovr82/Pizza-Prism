@@ -4,16 +4,16 @@ import Image from "next/image";
 const OurStory = () => {
   return (
     <section className="py-10 lg:py-20 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 items-center responsive-section">
-      <div className="">
+      <div className="max-lg:flex justify-center">
         <Image
-          className="rounded-3xl"
+          className="rounded-3xl max-lg:object-contain"
           width={530}
           height={500}
           src={hotelImage}
           alt=""
         />
       </div>
-      <div className="space-y-5">
+      <div className="space-y-5 max-lg:flex max-lg:flex-col max-lg:items-center max-lg:text-center">
         <div>
           <h4 className="text-[#eb7e09] font-sans font-medium text-xl">
             ABOUT US

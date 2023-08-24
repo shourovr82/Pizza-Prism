@@ -5,6 +5,10 @@ import Head from "next/head";
 import { motion } from "framer-motion";
 import OurStory from "@/components/Ui/Home/OurStory";
 import CustomersSays from "@/components/Ui/Home/CustomersSays";
+import MeetOurGreatChefs from "@/components/Ui/Home/MeetOurGreatChefs";
+import OrderNowSection from "@/components/Ui/Home/OrderNowSection";
+import OurLocation from "@/components/Ui/Home/OurLocation";
+import BookReservation from "@/components/Ui/Home/BookReservation";
 
 interface ExtendedHomePage extends React.FC {
   getLayout: (page: JSX.Element) => JSX.Element;
@@ -56,6 +60,18 @@ const HomePage: ExtendedHomePage = () => {
       </div>
       <div className="">
         <CustomersSays />
+      </div>
+      <div className="bg-[#f3f2f2] pb-5">
+        <MeetOurGreatChefs />
+      </div>
+      <div className="">
+        <OrderNowSection />
+      </div>
+      <div className="bg-[#f3f2f2] ">
+        <OurLocation />
+      </div>
+      <div className="reservationBg   ">
+        <BookReservation />
       </div>
     </>
   );
