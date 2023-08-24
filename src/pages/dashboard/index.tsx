@@ -22,15 +22,16 @@ import CardSection from "@/components/dashboard/cardSection";
 import UserSection from "@/components/dashboard/userSection";
 import OrderChart from "@/components/dashboard/orderChart";
 import LatestOrderAndStock from "@/components/dashboard/latestOrderAndStock";
+import Link from "next/link";
 
 const navigation = [
   { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
   {
-    name: "Customer",
-    href: "#",
+    name: "Order",
+    href: "dashboard/order",
     icon: UsersIcon,
     current: false,
-    children: [{ name: "Order List", href: "/orders/d" }],
+    children: [{ name: "Order List", href: "/dashboard/order/cooking" }],
   },
   {
     name: "Purchase",
@@ -170,7 +171,7 @@ export default function DashboradHomePage() {
                           <ul role="list" className="-mx-2 space-y-1">
                             {navigation.map((item) => (
                               <li key={item.name}>
-                                <a
+                                <Link
                                   href={item.href}
                                   className={classNames(
                                     item.current
@@ -189,7 +190,7 @@ export default function DashboradHomePage() {
                                     aria-hidden="true"
                                   />
                                   {item.name}
-                                </a>
+                                </Link>
                               </li>
                             ))}
                           </ul>
@@ -257,7 +258,7 @@ export default function DashboradHomePage() {
                   <ul role="list" className="-mx-2 space-y-1 ">
                     {navigation.map((item) => (
                       <li key={item.name}>
-                        <a
+                        <Link
                           href={item.href}
                           className={classNames(
                             item.current
@@ -276,7 +277,7 @@ export default function DashboradHomePage() {
                             aria-hidden="true"
                           />
                           {item.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>
