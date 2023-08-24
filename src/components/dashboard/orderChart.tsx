@@ -104,10 +104,7 @@ const OrderChart = () => {
   }, []);
 
   return (
-    <div
-      style={{ width: "100%" }}
-      className="bg-white mt-10 shadow-md rounded-3xl p-5"
-    >
+    <div style={{ width: "100%" }} className="bg-white mt-10 rounded-3xl p-5">
       {isClient && (
         // <ResponsiveContainer width="100%" height={300}>
         //   <AreaChart data={data}>

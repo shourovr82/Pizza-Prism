@@ -21,6 +21,7 @@ import { Navbar, NavbarBrand } from "@nextui-org/react";
 import CardSection from "@/components/dashboard/cardSection";
 import UserSection from "@/components/dashboard/userSection";
 import OrderChart from "@/components/dashboard/orderChart";
+import LatestOrderAndStock from "@/components/dashboard/latestOrderAndStock";
 
 const navigation = [
   { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
@@ -404,11 +405,12 @@ export default function DashboradHomePage() {
           </div>
 
           {/* Main Layout for Dashboard */}
-          <main className="py-10 bg-[#FAFAFA] h-screen">
+          <main className="py-10 bg-[#FAFAFA]">
             <div className="px-4 sm:px-6 lg:px-8">
               <UserSection />
               <CardSection />
               <OrderChart />
+              <LatestOrderAndStock />
             </div>
           </main>
         </div>
