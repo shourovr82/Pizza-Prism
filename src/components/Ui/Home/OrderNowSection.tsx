@@ -34,7 +34,13 @@ const OrderNowSection = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <Image className="deliveryBoy" src={deliveryBoy} alt="" />
+        <Image
+          className="deliveryBoy"
+          width={350}
+          height={300}
+          src={deliveryBoy}
+          alt=""
+        />
       </div>
     </section>
   );
