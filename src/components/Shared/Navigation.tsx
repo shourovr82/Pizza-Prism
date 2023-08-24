@@ -14,13 +14,14 @@ import {
   Avatar,
 } from "@nextui-org/react";
 import bellIcon from "@/Assets/Navbar/bell.png";
+import NavLink from "next/link";
 
 import { FaPhoneFlip } from "react-icons/fa6";
 import { BsHandbagFill } from "react-icons/bs";
 
 const Navigation = () => {
   return (
-    <div className=" bg-[#15181b] shadow-xl sticky top-0 z-30 shadow-[#1415129c] flex  justify-center">
+    <div className=" bg-[#15181b] shadow-xl sticky top-0 z-50 shadow-[#1415129c] flex  justify-center">
       <Navbar maxWidth="xl" className="bg-transparent   ">
         <NavbarContent className="" justify="start">
           <NavbarBrand className="">
@@ -28,7 +29,7 @@ const Navigation = () => {
           </NavbarBrand>
         </NavbarContent>
         <NavbarContent className="hidden sm:flex gap-6" justify="center">
-          <NavbarItem isActive>
+          {/* <NavbarItem isActive>
             <Link
               href="#"
               className="font-sans text-[15px] text-[#d1710c]"
@@ -36,7 +37,7 @@ const Navigation = () => {
             >
               Home
             </Link>
-          </NavbarItem>
+          </NavbarItem> */}
           <Dropdown>
             <NavbarItem>
               <DropdownTrigger>
@@ -90,28 +91,28 @@ const Navigation = () => {
             </DropdownMenu>
           </Dropdown>
           <NavbarItem isActive>
-            <Link
-              href="#"
+            <NavLink
+              href="/news"
               className="text-[#d8d9d9] text-[15px]   font-sans font-[400]"
             >
-              Specials and Coupons
-            </Link>
+              Specials <span className="max-lg:hidden"> and Coupons</span>
+            </NavLink>
           </NavbarItem>
           <NavbarItem>
             <Link
               href="#"
               className="text-[#d8d9d9] text-[15px]   font-sans font-[400]"
             >
-              Contact Us
+              Contact
             </Link>
           </NavbarItem>
           <NavbarItem>
-            <Link
+            <NavLink
               href="/dashboard"
               className="text-[#d8d9d9] text-[15px]   font-sans font-[400]"
             >
               Dashboard
-            </Link>
+            </NavLink>
           </NavbarItem>
         </NavbarContent>
         <NavbarContent className="items-center gap-4 flex" justify="end">

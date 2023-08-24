@@ -1,7 +1,7 @@
 const CustomersSays = () => {
   return (
-    <section className="responsive-section grid grid-cols-4 items-center gap-20 py-20">
-      <div className="space-y-3 col-span-2">
+    <section className="responsive-section grid max-lg:grid-cols-1 lg:grid-cols-4 items-center gap-20 py-20">
+      <div className="space-y-3 max-lg:flex max-lg:flex-col max-lg:items-center text-center col-span-2">
         <div className="space-y-2">
           <h3 className="text-3xl font-bold font-sans">
             What Our Customers Say
