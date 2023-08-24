@@ -8,7 +8,6 @@ const OurLocation = () => {
             style={{ border: 0, borderRadius: "20px" }}
             allowFullScreen={false}
             className="w-[300px] sm:w-[500px] md:w-[700px] lg:w-[800px] h-[250px] md:h-[350px]"
-            allowTransparency
             loading="eager"
             referrerPolicy="no-referrer-when-downgrade"
           />

@@ -121,3 +121,42 @@ body {
   animation: neon-loader 1s infinite alternate;
   transition: 0.5s all;
 }
+
+
+/* customer review */
+.slick-slide>div {
+  margin: 20px 10px 20px 10px;
+  padding: 0px;
+}
+
+/* Slider dots styling */
+.slick-dots {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  /* Adjust as needed */
+}
+
+.slick-dots li {
+  margin: 0 10px !important;
+  /* Adjust the spacing between dots */
+}
+
+.slick-dots li button {
+
+
+  /* Adjust dot size */
+  border: none;
+  background: #444;
+  /* Default dot color */
+  border-radius: 50%;
+  /* Rounded dot */
+  cursor: pointer;
+}
+
+.slick-dots li.slick-active button {
+  background: #ff9800;
+
+}
