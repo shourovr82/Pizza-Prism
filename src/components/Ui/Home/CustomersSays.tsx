@@ -92,7 +92,7 @@ const CustomersSays = () => {
             We Have 50+ Happy Reviews
           </h4>
         </div>
-        <p className="font-sans w-[80%] text-[#a9a5a1] ">
+        <p className="font-sans  mx-auto w-[80%] text-[#a9a5a1] ">
           Pizza Prism came into existence in the vibrant tapestry of culinary
           history during the early 2010s, founded by childhood friends Mia
           Ramirez and Luca Marino. Fueled by their shared passions for
