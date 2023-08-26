@@ -1,12 +1,11 @@
-import CookingStage from "@/components/dashboard/order/cookingStage";
 import React from "react";
 
-const OrderTrack = () => {
+const OrderDetails = () => {
   return (
     <div>
-      <CookingStage />
+      <h1>Order Details</h1>
     </div>
   );
 };
 
-export default OrderTrack;
+export default OrderDetails;
