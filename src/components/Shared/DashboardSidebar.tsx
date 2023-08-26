@@ -17,14 +17,14 @@ import {
 
 const DashboardSidebar = () => {
   return (
-    <div className="flex flex-col lg:justify-between py-5  font-sans h-full">
-      <div className=" lg:space-y-5">
+    <div className="flex flex-col lg:justify-between md:py-5 lg:py-2  font-sans h-full">
+      <div className=" md:space-y-5 lg:space-y-3">
         <div className="flex justify-center">
           <span className=" bg-[#fdefe0]  p-2.5 rounded-2xl">
             <CreativeIcon className="text-2xl" />
           </span>
         </div>
-        <div className="flex flex-col  lg:gap-3 xl:gap-2.5 justify-center items-center">
+        <div className="flex flex-col md:gap-3  lg:gap-2 justify-center items-center ">
           <Link
             href="/dashboard"
             className="flex flex-col items-center  py-3 px-3 rounded-xl bg-[#fef0e1]"
@@ -110,7 +110,7 @@ const DashboardSidebar = () => {
           </Link>
         </div>
       </div>
-      <div>
+      <div className="md:mt-2 ">
         <div className="flex items-center justify-center gap-4">
           <Dropdown type="menu">
             <DropdownTrigger>

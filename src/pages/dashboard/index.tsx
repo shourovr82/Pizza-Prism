@@ -3,17 +3,10 @@ import CardSection from "@/components/dashboard/cardSection";
 import UserSection from "@/components/dashboard/userSection";
 import OrderChart from "@/components/dashboard/orderChart";
 import LatestOrderAndStock from "@/components/dashboard/latestOrderAndStock";
-import { useForm } from "react-hook-form";
-import { useRouter } from "next/router";
+
 import DashboardLayout from "@/components/Layouts/DashboardLayout";
 
 export default function DashboardHomePage() {
-  type Inputs = {
-    searchTerm: string;
-  };
-
-  const { register, handleSubmit } = useForm<Inputs>();
-
   return (
     <>
       <Head>
@@ -27,9 +20,9 @@ export default function DashboardHomePage() {
         {/* <Dashboard /> */}
 
         {/*  */}
-        <div className="relative">
+        <div className="relative font-sans">
           {/* Main Layout for Dashboard */}
-          <main className=" w-full p-5 bg-[#FAFAFA]">
+          <main className=" w-full p-5 bg-[#fafafa]">
             <div className="">
               <UserSection />
               <CardSection />
