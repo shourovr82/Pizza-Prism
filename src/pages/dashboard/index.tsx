@@ -4,7 +4,7 @@ import UserSection from "@/components/dashboard/userSection";
 import OrderChart from "@/components/dashboard/orderChart";
 import LatestOrderAndStock from "@/components/dashboard/latestOrderAndStock";
 
-import DashboardLayout from "@/components/Layouts/DashboardLayout";
+import DashboardLayout from "@/components/Layouts/Dashboard/DashboardLayout";
 
 export default function DashboardHomePage() {
   return (
