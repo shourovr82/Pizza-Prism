@@ -12,7 +12,8 @@ font-family: 'Viga', sans-serif;
 font-family: 'Ysabeau Infant', sans-serif; */
 
 body {
-  background-color: #fffbf6;
+  background-color: #fafafa;
+  /* background-color: #fffbf6; */
   /* font-family: sans-serif; */
 }
 
@@ -159,4 +160,28 @@ body {
 .slick-dots li.slick-active button {
   background: #ff9800;
 
+}
+
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f78908;
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+  background-color: #c1c8cf;
+
+}
+
+/* dashboard */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }

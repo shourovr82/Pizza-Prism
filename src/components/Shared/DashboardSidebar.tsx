@@ -4,6 +4,7 @@ import Link from "next/link";
 import { BiFoodMenu, BiSolidCategoryAlt } from "react-icons/bi";
 import { FaChartPie } from "react-icons/fa6";
 import { RiSettings4Fill } from "react-icons/ri";
+import { GoClockFill } from "react-icons/go";
 import { IoNotificationsSharp } from "react-icons/io5";
 import { BsHouseDoorFill } from "react-icons/bs";
 import {
@@ -14,8 +15,10 @@ import {
   DropdownMenu,
   DropdownTrigger,
 } from "@nextui-org/react";
+import { useRouter } from "next/router";
 
 const DashboardSidebar = () => {
+  const router = useRouter();
   return (
     <div className="flex flex-col lg:justify-between md:py-5 lg:py-2  font-sans h-full">
       <div className=" md:space-y-5 lg:space-y-3">
@@ -25,88 +28,186 @@ const DashboardSidebar = () => {
           </span>
         </div>
         <div className="flex flex-col md:gap-3  lg:gap-2 justify-center items-center ">
+          {/* dashboard home */}
           <Link
             href="/dashboard"
-            className="flex flex-col items-center  py-3 px-3 rounded-xl bg-[#fef0e1]"
+            className={`   ${
+              router.pathname === "/dashboard" && "bg-[#fef0e1]"
+            }  flex flex-col    
+             items-center py-3 px-3 group rounded-xl hover:bg-[#fef0e1]`}
           >
             <span>
-              <BsHouseDoorFill className="text-[#ec7905]" size={16} />
+              <BsHouseDoorFill
+                className={`${
+                  router.pathname === "/dashboard" && "text-[#ec7905]"
+                }  group-hover:text-[#ec7905] text-[#7f7f7f] text-lg`}
+                size={16}
+              />
             </span>
-            <h4 className="text-[#ec7905] text-xs  ">Home</h4>
+            <h4
+              className={`${
+                router.pathname === "/dashboard" && "text-[#ec7905]"
+              }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
+            >
+              Home
+            </h4>
           </Link>
+
+          {/* dashboard table */}
           <Link
-            href="/dashboard"
-            className="flex flex-col items-center  py-2.5 px-3.5 rounded-xl hover:bg-[#fef0e1]"
+            href="/dashboard/table"
+            className={`   ${
+              router.pathname === "/dashboard/table" && "bg-[#fef0e1]"
+            }  flex flex-col items-center  py-3 px-3.5 group rounded-xl hover:bg-[#fef0e1]`}
           >
             <span>
-              <BiSolidCategoryAlt className="text-[#7f7f7f] text-lg" />
+              <BiSolidCategoryAlt
+                className={`${
+                  router.pathname === "/dashboard/table" && "text-[#ec7905]"
+                }  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
+              />
             </span>
-            <h4 className="text-[#7f7f7f] text-xs">Table</h4>
+            <h4
+              className={`${
+                router.pathname === "/dashboard/table" && "text-[#ec7905]"
+              }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
+            >
+              Table
+            </h4>
           </Link>
+          {/* dashboard menu */}
           <Link
-            href="/dashboard"
-            className="flex flex-col items-center  py-2.5 px-3 rounded-xl hover:bg-[#fef0e1]"
+            href="/dashboard/menu"
+            className={`   ${
+              router.pathname === "/dashboard/menu" && "bg-[#fef0e1]"
+            }  flex flex-col items-center  py-3 px-3 group rounded-xl hover:bg-[#fef0e1]`}
           >
             <span>
-              <BiFoodMenu className="text-[#7f7f7f] text-lg" />
+              <BiFoodMenu
+                className={`${
+                  router.pathname === "/dashboard/menu" && "text-[#ec7905]"
+                }  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
+              />
             </span>
-            <h4 className="text-[#7f7f7f] text-xs">Menu</h4>
+            <h4
+              className={`${
+                router.pathname === "/dashboard/menu" && "text-[#ec7905]"
+              }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
+            >
+              Menu
+            </h4>
           </Link>
+          {/* dashboard orders */}
           <Link
-            href="/dashboard"
-            className="flex flex-col items-center  py-2.5 px-3 rounded-xl hover:bg-[#fef0e1]"
+            href="/dashboard/orders"
+            className={`   ${
+              router.pathname === "/dashboard/orders" && "bg-[#fef0e1]"
+            }  flex flex-col items-center  py-3 px-3 group rounded-xl hover:bg-[#fef0e1]`}
           >
             <span>
-              <FaShoppingCart className="text-[#7f7f7f] text-lg" />
+              <FaShoppingCart
+                className={`${
+                  router.pathname === "/dashboard/orders" && "text-[#ec7905]"
+                }  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
+              />
             </span>
-            <h4 className="text-[#7f7f7f] text-xs ">Order</h4>
+            <h4
+              className={`${
+                router.pathname === "/dashboard/menu" && "text-[#ec7905]"
+              }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
+            >
+              Orders
+            </h4>
           </Link>
+          {/* dashboard history */}
           <Link
-            href="/dashboard"
-            className="flex flex-col items-center  py-2.5 px-2.5 rounded-xl hover:bg-[#fef0e1]"
+            href="/dashboard/history"
+            className={`   ${
+              router.pathname === "/dashboard/history" && "bg-[#fef0e1]"
+            }  flex flex-col items-center  py-3 px-3 group rounded-xl hover:bg-[#fef0e1]`}
           >
             <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="#7f7f7f"
-                className="w-5 h-5"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z"
-                  clipRule="evenodd"
-                />
-              </svg>
+              <GoClockFill
+                className={`${
+                  router.pathname === "/dashboard/history" && "text-[#ec7905]"
+                }  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
+              />
             </span>
-            <h4 className="text-[#7f7f7f] text-xs">History</h4>
+            <h4
+              className={`${
+                router.pathname === "/dashboard/history" && "text-[#ec7905]"
+              }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
+            >
+              History
+            </h4>
           </Link>
+          {/* dashboard */}
           <Link
-            href="/dashboard"
-            className="flex flex-col items-center  py-2.5 px-3 rounded-xl hover:bg-[#fef0e1]"
+            href="/dashboard/report"
+            className={`   ${
+              router.pathname === "/dashboard/report" && "bg-[#fef0e1]"
+            }  flex flex-col items-center  py-3 px-3 group rounded-xl hover:bg-[#fef0e1]`}
           >
             <span>
-              <FaChartPie className="text-[#7f7f7f] text-lg" />
+              <FaChartPie
+                className={`${
+                  router.pathname === "/dashboard/report" && "text-[#ec7905]"
+                }  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
+              />
             </span>
-            <h4 className="text-[#7f7f7f] text-xs">Report</h4>
+            <h4
+              className={`${
+                router.pathname === "/dashboard/report" && "text-[#ec7905]"
+              }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
+            >
+              Report
+            </h4>
           </Link>
+          {/* dashboard alert */}
           <Link
-            href="/dashboard"
-            className="flex flex-col items-center  py-2.5 px-[18px] rounded-xl hover:bg-[#fef0e1]"
+            href="/dashboard/alert"
+            className={`   ${
+              router.pathname === "/dashboard/alert" && "bg-[#fef0e1]"
+            }  flex flex-col    
+             items-center  py-3 px-4 group rounded-xl hover:bg-[#fef0e1]`}
           >
             <span>
-              <IoNotificationsSharp className="text-[#7f7f7f] text-lg" />
+              <IoNotificationsSharp
+                className={`${
+                  router.pathname === "/dashboard/alert" && "text-[#ec7905]"
+                }  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
+              />
             </span>
-            <h4 className="text-[#7f7f7f] text-xs">Alert</h4>
+            <h4
+              className={`${
+                router.pathname === "/dashboard/alert" && "text-[#ec7905]"
+              }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
+            >
+              Alert
+            </h4>
           </Link>
+          {/* dashboard settings */}
           <Link
-            href="/dashboard"
-            className="flex flex-col items-center  py-2.5 px-3 rounded-xl hover:bg-[#fef0e1]"
+            href="/dashboard/settings"
+            className={`   ${
+              router.pathname === "/dashboard/settings" && "bg-[#fef0e1]"
+            }  flex flex-col    
+             items-center  py-3 px-4 group rounded-xl hover:bg-[#fef0e1]`}
           >
             <span>
-              <RiSettings4Fill className="text-[#7f7f7f] text-lg" />
+              <RiSettings4Fill
+                className={`${
+                  router.pathname === "/dashboard/settings" && "text-[#ec7905]"
+                }  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
+              />
             </span>
-            <h4 className="text-[#7f7f7f] text-xs">Settings</h4>
+            <h4
+              className={`${
+                router.pathname === "/dashboard/settings" && "text-[#ec7905]"
+              }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
+            >
+              Settings
+            </h4>
           </Link>
         </div>
       </div>

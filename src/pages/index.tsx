@@ -28,6 +28,7 @@ const HomePage: ExtendedHomePage = () => {
         initial="initialState"
         animate="animateState"
         exit="exitState"
+        className="bg-[#fafafa]"
         transition={{
           duration: 0.75,
         }}
