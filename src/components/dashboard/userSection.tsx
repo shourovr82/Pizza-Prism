@@ -2,7 +2,7 @@ import React from "react";
 
 const UserSection = () => {
   return (
-    <div>
+    <div className="">
       <h1>
         Welcome to, <span className="text-yellow-500">Salim Al Sazu</span>
       </h1>

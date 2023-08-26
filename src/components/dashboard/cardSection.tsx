@@ -34,7 +34,7 @@ const CardSection = () => {
   ];
 
   return (
-    <div className="mt-20">
+    <div className="mt-5">
       <div className="grid grid-cols-4 gap-3 justify-center items-center">
         {data.map((card) => (
           <div

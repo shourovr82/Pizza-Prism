@@ -35,6 +35,7 @@
     "react-redux": "^8.1.2",
     "react-slick": "^0.29.0",
     "recharts": "^2.7.3",
+    "rsuite": "^5.38.0",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
