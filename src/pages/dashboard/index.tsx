@@ -1,5 +1,5 @@
 import { Fragment, useState } from "react";
-import { Dialog, Disclosure, Menu, Transition } from "@headlessui/react";
+import { Dialog, Transition } from "@headlessui/react";
 import {
   Bars3Icon,
   BellIcon,
@@ -23,6 +23,8 @@ import UserSection from "@/components/dashboard/userSection";
 import OrderChart from "@/components/dashboard/orderChart";
 import LatestOrderAndStock from "@/components/dashboard/latestOrderAndStock";
 import Link from "next/link";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { useRouter } from "next/router";
 
 const navigation = [
   { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
@@ -89,7 +91,18 @@ function classNames(...classes) {
 }
 
 export default function DashboradHomePage() {
+  const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  type Inputs = {
+    searchTerm: string;
+  };
+
+  const { register, handleSubmit } = useForm<Inputs>();
+
+  const onSubmit: SubmitHandler<Inputs> = (data) => {
+    console.log(data);
+    router.push("/dashboard/ordertracking");
+  };
 
   return (
     <>
@@ -318,7 +331,11 @@ export default function DashboradHomePage() {
             /> */}
 
             <div className="flex flex-1 gap-x-4 self-stretch lg:gap-x-6 ">
-              <form className="relative flex flex-1" action="#" method="GET">
+              <form
+                onSubmit={handleSubmit(onSubmit)}
+                className="relative flex flex-1"
+                action="#"
+              >
                 <label htmlFor="search-field" className="sr-only">
                   Search
                 </label>
@@ -327,11 +344,12 @@ export default function DashboradHomePage() {
                   aria-hidden="true"
                 />
                 <input
+                  {...register("searchTerm", { required: true })}
                   id="search-field"
                   className="block h-full w-full border-0 py-0 pl-8 pr-0 text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm animate-fade-in opacity-100"
                   placeholder="Search your order"
                   type="search"
-                  name="search"
+                  name="searchTerm"
                 />
               </form>
               <div className="flex items-center gap-x-4 lg:gap-x-6">
