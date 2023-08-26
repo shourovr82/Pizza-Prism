@@ -101,7 +101,7 @@ export default function DashboradHomePage() {
 
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     console.log(data);
-    router.push("/dashboard/orderTracking");
+    router.push("/dashboard/ordertracking");
   };
 
   return (
