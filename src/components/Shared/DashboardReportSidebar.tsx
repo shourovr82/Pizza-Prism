@@ -1,60 +1,37 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { FaTools } from "react-icons/fa";
-import { FaEye, FaHotel } from "react-icons/fa6";
-import { HiShieldCheck } from "react-icons/hi";
-import { HiMiniLanguage } from "react-icons/hi2";
-import { IoNotifications, IoWalletSharp } from "react-icons/io5";
+import { TiChartArea } from "react-icons/ti";
+import { FaSellsy } from "react-icons/fa6";
+import { TbChartDonutFilled } from "react-icons/tb";
 
-const DashboardSettingsSidebar = () => {
+import { IoReceipt, IoWalletSharp } from "react-icons/io5";
+
+import { BiSolidBarChartAlt2 } from "react-icons/bi";
+import { RiWaterPercentFill } from "react-icons/ri";
+
+const DashboardReportSidebar = () => {
   const router = useRouter();
 
   const allLinks = [
     {
-      href: "/dashboard/settings/appearance",
-      title: "Appearance",
+      href: "/dashboard/report",
+      title: "Sales Summary",
       icon: (
-        <FaEye
+        <TbChartDonutFilled
           className={`${
-            router.pathname === "/dashboard/settings/appearance" &&
-            "!text-[#ec7905]"
+            router.pathname === "/dashboard/report" && "!text-[#ec7905]"
           }  group-hover:text-[#ec7905] text-[#939393] `}
           size={20}
         />
       ),
     },
     {
-      href: "/dashboard/your-restaurant",
-      title: "Your Restaurant",
-      icon: (
-        <FaHotel
-          className={`${
-            router.pathname === "/dashboard/settings/your-restaurant" &&
-            "!text-[#ec7905]"
-          }  group-hover:text-[#ec7905] text-[#939393] `}
-          size={20}
-        />
-      ),
-    },
-    {
-      href: "/dashboard/settings",
-      title: "Product Management",
-      icon: (
-        <FaTools
-          className={`${
-            router.pathname === "/dashboard/settings" && "!text-[#ec7905]"
-          }  group-hover:text-[#ec7905] text-[#939393] `}
-          size={20}
-        />
-      ),
-    },
-    {
-      href: "/dashboard/settings/checkout-settings",
-      title: "Checkout Settings",
+      href: "/dashboard/report/payment-method",
+      title: "Payment Method",
       icon: (
         <IoWalletSharp
           className={`${
-            router.pathname === "/dashboard/settings/checkout-settings" &&
+            router.pathname === "/dashboard/report/payment-method" &&
             "!text-[#ec7905]"
           }  group-hover:text-[#ec7905] text-[#939393] `}
           size={20}
@@ -62,12 +39,12 @@ const DashboardSettingsSidebar = () => {
       ),
     },
     {
-      href: "/dashboard/settings/notifications",
-      title: "Notifications",
+      href: "/dashboard/report/item-sales",
+      title: "Item Sales",
       icon: (
-        <IoNotifications
+        <TiChartArea
           className={`${
-            router.pathname === "/dashboard/settings/notifications" &&
+            router.pathname === "/dashboard/report/item-sales" &&
             "!text-[#ec7905]"
           }  group-hover:text-[#ec7905] text-[#939393] `}
           size={20}
@@ -75,12 +52,12 @@ const DashboardSettingsSidebar = () => {
       ),
     },
     {
-      href: "/dashboard/settings/security",
-      title: "Security",
+      href: "/dashboard/report/category-sales",
+      title: "Category Sales",
       icon: (
-        <HiShieldCheck
+        <FaSellsy
           className={`${
-            router.pathname === "/dashboard/settings/security" &&
+            router.pathname === "/dashboard/report/category-sales" &&
             "!text-[#ec7905]"
           }  group-hover:text-[#ec7905] text-[#939393] `}
           size={20}
@@ -88,13 +65,38 @@ const DashboardSettingsSidebar = () => {
       ),
     },
     {
-      href: "/dashboard/settings/language",
-      title: "Language",
+      href: "/dashboard/report/modifier-sales",
+      title: "Modifier Sales",
       icon: (
-        <HiMiniLanguage
+        <BiSolidBarChartAlt2
           className={`${
-            router.pathname === "/dashboard/settings/language" &&
+            router.pathname === "/dashboard/report/modifier-sales" &&
             "!text-[#ec7905]"
+          }  group-hover:text-[#ec7905] text-[#939393] `}
+          size={20}
+        />
+      ),
+    },
+    {
+      href: "/dashboard/report/discounts",
+      title: "Discounts",
+      icon: (
+        <RiWaterPercentFill
+          className={`${
+            router.pathname === "/dashboard/report/discounts" &&
+            "!text-[#ec7905]"
+          }  group-hover:text-[#ec7905] text-[#939393] `}
+          size={20}
+        />
+      ),
+    },
+    {
+      href: "/dashboard/report/taxes",
+      title: "Taxes",
+      icon: (
+        <IoReceipt
+          className={`${
+            router.pathname === "/dashboard/report/taxes" && "!text-[#ec7905]"
           }  group-hover:text-[#ec7905] text-[#939393] `}
           size={20}
         />
@@ -129,4 +131,4 @@ const DashboardSettingsSidebar = () => {
   );
 };
 
-export default DashboardSettingsSidebar;
+export default DashboardReportSidebar;
