@@ -1,40 +1,82 @@
 import DashboardLayout from "@/components/Layouts/Dashboard/DashboardLayout";
 import DashboardReportLayout from "@/components/Layouts/Dashboard/DashboardReportLayout";
-import { DateRangePicker } from "rsuite";
-import { Dropdown } from "rsuite";
-import PageIcon from "@rsuite/icons/Page";
-import FolderFillIcon from "@rsuite/icons/FolderFill";
-import FileDownloadIcon from "@rsuite/icons/FileDownload";
-import DetailIcon from "@rsuite/icons/Detail";
+import ReportSalesSummaryFilter from "@/components/dashboard/report/ReportSalesSummaryFilter";
+import { BiUpArrowAlt } from "react-icons/bi";
+import { BsArrowUpRight, BsCartDashFill } from "react-icons/bs";
+import { IoFastFoodSharp } from "react-icons/io5";
 
 const DashboardReportPage = () => {
+  const data = [
+    {
+      title: "Revenue",
+      value: "$14.329",
+      ratio: 10,
+      icon: (
+        <span className="rounded-full p-2 bg-[#ef9234]">
+          <BsArrowUpRight size={20} className="text-white" />
+        </span>
+      ),
+    },
+    {
+      title: "Orders",
+      value: 2.506,
+      ratio: 20,
+      icon: (
+        <span className="rounded-full p-2 bg-[#54ca92]">
+          <BsCartDashFill size={20} className="text-white" />
+        </span>
+      ),
+    },
+
+    {
+      title: "Average",
+      value: "$2.047",
+      ratio: 10,
+      icon: (
+        <span className="rounded-full p-2 bg-[#ffc245]">
+          <IoFastFoodSharp size={20} className="text-white" />
+        </span>
+      ),
+    },
+  ];
+
   return (
-    <div>
-      <div>
-        {" "}
-        <div className="flex gap-5 items-center relative">
-          <div>
-            <DateRangePicker className="w-[210px]" placeholder="Last 7 days" />
-          </div>
-          <div className="  w-full">
-            <Dropdown
-              title="Export"
-              className="border rounded-lg "
-              icon={<PageIcon />}
+    <>
+      <ReportSalesSummaryFilter />
+      {/* main contents */}
+      <section className="mt-5">
+        <div className="grid grid-cols-2 lg:grid-cols-3  gap-3 lg:gap-6 justify-center items-center">
+          {data.map((card) => (
+            <div
+              className="bg-white  shadow-gray-500 p-5 rounded-[30px]"
+              key={Math.random()}
             >
-              <Dropdown.Item icon={<PageIcon />}>New File</Dropdown.Item>
-              <Dropdown.Item icon={<FolderFillIcon />}>
-                New File with Current Profile
-              </Dropdown.Item>
-              <Dropdown.Item icon={<FileDownloadIcon />}>
-                Download As...
-              </Dropdown.Item>
-              <Dropdown.Item icon={<DetailIcon />}>Export PDF</Dropdown.Item>
-            </Dropdown>
-          </div>
+              <div className="flex items-start justify-between ">
+                <h1 className="font-bold   text-[#333333] text-2xl">
+                  {card.title}
+                </h1>
+                <div>
+                  <p className="text-[15px] text-red-500 flex font-bold  items-center gap-1">
+                    {card.ratio}%{" "}
+                    <span>
+                      <BiUpArrowAlt />
+                    </span>{" "}
+                  </p>
+                  <p className="text-red-500 font-bold text-[10px]">Last Day</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-5 mt-2">
+                {card.icon}
+                <p className="text-2xl xl:text-3xl text-[#333333] font-bold ">
+                  {card.value}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
-      </div>
-    </div>
+      </section>
+    </>
   );
 };
 
