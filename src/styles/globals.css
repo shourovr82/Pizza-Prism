@@ -187,7 +187,6 @@ body {
 }
 
 /* dashboard report */
-.rs-btn {
-  background-color: #fff !important;
-  background-color: #fff !important;
+.custom-dropdown {
+  background-color: white !important;
 }
