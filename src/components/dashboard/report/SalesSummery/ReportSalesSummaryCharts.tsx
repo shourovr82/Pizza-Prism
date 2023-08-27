@@ -8,96 +8,80 @@ import {
   AreaChart,
   Area,
   CartesianGrid,
+  Legend,
 } from "recharts";
 
 const data = [
   {
-    name: "11.00 AM",
-    uv: 15,
+    name: "11.00am",
+    uv: 0,
     pv: 2400,
     amt: 2400,
   },
   {
-    name: "12.00 PM",
-    uv: 20,
+    name: "12.00am",
+    uv: 529,
     pv: 1398,
     amt: 2210,
   },
   {
-    name: "01.00 PM",
-    uv: 60,
+    name: "01.00pm",
+    uv: 629,
     pv: 9800,
     amt: 2290,
   },
   {
-    name: "02.00 PM",
-    uv: 100,
+    name: "02.00pm",
+    uv: 900,
     pv: 3908,
     amt: 2000,
   },
   {
-    name: "03.00 PM",
-    uv: 80,
+    name: "03.00pm",
+    uv: 570,
     pv: 4800,
     amt: 2181,
   },
   {
-    name: "04.00 PM",
-    uv: 55,
+    name: "04.00pm",
+    uv: 415,
     pv: 3800,
     amt: 2500,
   },
   {
-    name: "05.00 PM",
-    uv: 200,
+    name: "05.00pm",
+    uv: 190,
     pv: 4300,
     amt: 2100,
   },
   {
-    name: "06.00 PM",
-    uv: 138,
+    name: "06.00pm",
+    uv: 360,
     pv: 4300,
     amt: 2100,
   },
   {
-    name: "07.00 PM",
-    uv: 91,
-    pv: 4300,
-    amt: 2100,
-  },
-  {
-    name: "08.00 PM",
-    uv: 48,
-    pv: 4300,
-    amt: 2100,
-  },
-  {
-    name: "09.00 PM",
-    uv: 56,
-    pv: 4300,
-    amt: 2100,
-  },
-  {
-    name: "10.00 PM",
-    uv: 15,
+    name: "07.00pm",
+    uv: 100,
     pv: 4300,
     amt: 2100,
   },
 ];
-
-const customToolTip = ({ active, payload }: any) => {
-  if (active && payload && payload.length) {
-    return (
-      <div className="bg-black rounded-3xl p-2">
-        <p className="text-white">{payload[0].value}</p>
-      </div>
-    );
-  }
-};
-
-// For client side Rendering
-const OrderChart = () => {
+const ReportSalesSummaryCharts = () => {
   const [isClient, setIsClient] = useState(false);
+
+  const customToolTip = ({ active, payload }: any) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="bg-black rounded-3xl p-2">
+          <p className="text-white">{payload[0].value}</p>
+        </div>
+      );
+    }
+  };
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   const CustomTick = ({ x, y, payload }: any) => {
     const paddingLeft = payload.index === 0 ? 20 : 0; // Add padding only for the first tick
     return (
@@ -117,10 +101,6 @@ const OrderChart = () => {
       </g>
     );
   };
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   return (
     <div style={{ width: "100%" }} className="bg-white mt-6 rounded-3xl p-5">
@@ -173,4 +153,4 @@ const OrderChart = () => {
   );
 };
 
-export default OrderChart;
+export default ReportSalesSummaryCharts;
