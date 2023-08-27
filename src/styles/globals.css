@@ -185,3 +185,9 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+/* dashboard report */
+.rs-btn {
+  background-color: #fff !important;
+  background-color: #fff !important;
+}

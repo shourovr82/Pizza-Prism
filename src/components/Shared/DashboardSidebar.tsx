@@ -141,7 +141,7 @@ const DashboardSidebar = () => {
               History
             </h4>
           </Link>
-          {/* dashboard */}
+          {/* dashboard report */}
           <Link
             href="/dashboard/report"
             className={`   ${
