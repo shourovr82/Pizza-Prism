@@ -6,6 +6,7 @@ import store from "@/redux/store";
 import { NextUIProvider } from "@nextui-org/react";
 import { AnimatePresence, motion } from "framer-motion";
 import "rsuite/dist/rsuite-no-reset.min.css";
+import "react-nice-dates/build/style.css";
 
 type ComponentWithLayout = AppProps["Component"] & {
   getLayout?: (page: JSX.Element) => JSX.Element;

@@ -3,10 +3,9 @@ import { Button, ScrollShadow, Tab, Tabs } from "@nextui-org/react";
 import { useState } from "react";
 import { BsCashCoin } from "react-icons/bs";
 import { FaRegCreditCard } from "react-icons/fa6";
-import { GrCreditCard } from "react-icons/gr";
 import { IoWallet } from "react-icons/io5";
 
-const OrderDetails = () => {
+const DashboardOrdersPage = () => {
   const [activeFilter, setActiveFilter] = useState(1);
   const OrdersData = [
     {
@@ -306,7 +305,8 @@ const OrderDetails = () => {
   );
 };
 
-export default OrderDetails;
-OrderDetails.getLayout = function getLayout(page: any) {
+export default DashboardOrdersPage;
+
+DashboardOrdersPage.getLayout = function getLayout(page: any) {
   return <DashboardLayout>{page}</DashboardLayout>;
 };
