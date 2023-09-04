@@ -113,7 +113,7 @@ const DashboardSidebar = () => {
             </span>
             <h4
               className={`${
-                router.pathname === "/dashboard/menu" && "text-[#ec7905]"
+                router.pathname === "/dashboard/orders" && "text-[#ec7905]"
               }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
             >
               Orders

@@ -4,17 +4,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Barriecito&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Varela+Round&family=Viga&family=Ysabeau+Infant:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
 
-/* font-family: 'ABeeZee', sans-serif;
-font-family: 'Barriecito', cursive;
-font-family: 'Space Grotesk', sans-serif;
-font-family: 'Varela Round', sans-serif;
-font-family: 'Viga', sans-serif;
-font-family: 'Ysabeau Infant', sans-serif; */
 
 body {
   background-color: #fafafa;
-  /* background-color: #fffbf6; */
-  /* font-family: sans-serif; */
 }
 
 .logoTitle {
@@ -189,4 +181,24 @@ body {
 /* dashboard report */
 .custom-dropdown {
   background-color: white !important;
+}
+
+/* dashboard orders pay bills  */
+
+.pay-bills-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  border-radius: 15px;
+  background-image: linear-gradient(to right, #f78708, #f78708);
+  text-decoration: none;
+  animation: neon-loader 1s infinite alternate;
+  transition: 0.5s all;
+}
+
+.pay-bills-btn:hover {
+  background-color: #f8be12 !important;
+  animation-play-state: paused;
+  box-shadow: 0 0 10px #f78708, 0 0 10px #f8be12, 0 0 10px #f78708;
 }
