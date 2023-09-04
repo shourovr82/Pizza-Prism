@@ -202,3 +202,29 @@ body {
   animation-play-state: paused;
   box-shadow: 0 0 10px #f78708, 0 0 10px #f8be12, 0 0 10px #f78708;
 }
+
+
+.nice-dates-navigation,
+.nice-dates-day {
+  color: #111;
+}
+
+.nice-dates-popover {
+  box-shadow: none;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  transition: none;
+}
+
+.nice-dates-day:before {
+  background-color: #ec7905 !important;
+  z-index: 1;
+}
+
+.nice-dates-day:after {
+  border: 2px solid #ec7905 !important;
+  transform: scale(0.95);
+  transition-duration: 200ms !important;
+  transition-property: transform, opacity;
+  z-index: 2;
+}
