@@ -232,11 +232,15 @@ const DashboardSidebar = () => {
               aria-label="Action event example"
               onAction={(key) => alert(key)}
             >
-              <DropdownItem key="new">New file</DropdownItem>
-              <DropdownItem key="copy">Copy link</DropdownItem>
-              <DropdownItem key="edit">Edit file</DropdownItem>
-              <DropdownItem key="delete" className="text-danger" color="danger">
-                Delete file
+              <DropdownItem key="new">Personal Information</DropdownItem>
+              <DropdownItem key="copy">Login Setting</DropdownItem>
+              <DropdownItem key="edit">Password Setting</DropdownItem>
+              <DropdownItem
+                key="delete"
+                className="text-red-600 hover:!text-white font-semibold py-2"
+                color="warning"
+              >
+                Log Out
               </DropdownItem>
             </DropdownMenu>
           </Dropdown>

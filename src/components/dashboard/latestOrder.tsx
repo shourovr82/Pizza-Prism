@@ -62,10 +62,10 @@ const LatestOrder = () => {
   ];
 
   return (
-    <div className="bg-white rounded-3xl p-10">
+    <div className="bg-white rounded-3xl p-5">
       <div className="flex justify-between items-center">
         <h1 className="text-3xl text-gray-600 font-bold">Latest Order</h1>
-        <p className="text-red-500 flex items-center gap-2">
+        <p className="text-[#ed7f10] flex items-center gap-2">
           view all{" "}
           <span>
             {" "}

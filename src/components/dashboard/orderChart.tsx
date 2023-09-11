@@ -49,7 +49,7 @@ const data = [
   },
   {
     name: "05.00 PM",
-    uv: 200,
+    uv: 150,
     pv: 4300,
     amt: 2100,
   },
@@ -79,6 +79,12 @@ const data = [
   },
   {
     name: "10.00 PM",
+    uv: 45,
+    pv: 4300,
+    amt: 2100,
+  },
+  {
+    name: "11.00 PM",
     uv: 15,
     pv: 4300,
     amt: 2100,
@@ -123,9 +129,9 @@ const OrderChart = () => {
   }, []);
 
   return (
-    <div style={{ width: "100%" }} className="bg-white mt-6 rounded-3xl p-5">
+    <div className="bg-white rounded-3xl p-5 shadow-lg shadow-[#7acae913]">
       {isClient && (
-        <ResponsiveContainer width="100%" height={300}>
+        <ResponsiveContainer width="100%" height={408}>
           <AreaChart
             data={data}
             margin={{ top: 10, right: 30, left: 0, bottom: 0 }}

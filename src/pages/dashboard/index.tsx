@@ -5,6 +5,7 @@ import OrderChart from "@/components/dashboard/orderChart";
 import LatestOrderAndStock from "@/components/dashboard/latestOrderAndStock";
 
 import DashboardLayout from "@/components/Layouts/Dashboard/DashboardLayout";
+import TotalIncomeChart from "@/components/dashboard/TotalIncomeChart";
 
 export default function DashboardHomePage() {
   return (
@@ -26,7 +27,14 @@ export default function DashboardHomePage() {
             <div className="">
               <UserSection />
               <CardSection />
-              <OrderChart />
+              <div className="grid grid-cols-8  mt-6  gap-5">
+                <div className="col-span-5">
+                  <OrderChart />
+                </div>
+                <div className="col-span-3">
+                  <TotalIncomeChart />
+                </div>
+              </div>
               <LatestOrderAndStock />
             </div>
           </main>
