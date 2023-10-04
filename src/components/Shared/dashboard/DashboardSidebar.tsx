@@ -228,11 +228,15 @@ const DashboardSidebar = () => {
                 />
               </Button>
             </DropdownTrigger>
-            <DropdownMenu
-              aria-label="Action event example"
-              onAction={(key) => alert(key)}
-            >
-              <DropdownItem key="new">Personal Information</DropdownItem>
+            <DropdownMenu aria-label="Action event example">
+              <DropdownItem
+                key="new"
+                as={Link}
+                href="/dashboard/profile-setting"
+              >
+                {" "}
+                Personal Information
+              </DropdownItem>
               <DropdownItem key="copy">Login Setting</DropdownItem>
               <DropdownItem key="edit">Password Setting</DropdownItem>
               <DropdownItem

@@ -1,4 +1,4 @@
-import DashboardSidebar from "../../Shared/DashboardSidebar";
+import DashboardSidebar from "../../Shared/dashboard/DashboardSidebar";
 
 export default function DashboardLayout({
   children,

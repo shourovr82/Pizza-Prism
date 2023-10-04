@@ -1,7 +1,7 @@
 import DashboardLayout from "@/components/Layouts/Dashboard/DashboardLayout";
 import DashboardSettingsLayout from "@/components/Layouts/Dashboard/DashboardSettingsLayout";
 import { Tabs, Tab } from "@nextui-org/react";
-import { LuEdit3 } from "react-icons/lu";
+import { LuFileEdit } from "react-icons/lu";
 import { FaPizzaSlice } from "react-icons/fa";
 import { PiHamburgerFill } from "react-icons/pi";
 import { GiBowlOfRice } from "react-icons/gi";
@@ -107,7 +107,7 @@ const DashboardSettings = () => {
                 className="text-[#ec7a07] font-medium border border-[#ec7a07] px-3 py-[18px] rounded-full   border-dashed flex items-center gap-2 hover:bg-[#ec7a07] bg-white  hover:text-white"
               >
                 <span>
-                  <LuEdit3 />
+                  <LuFileEdit />
                 </span>
                 Category
               </Button>

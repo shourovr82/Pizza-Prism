@@ -100,7 +100,7 @@ const CustomersSays = () => {
       </div>
       <div className="col-span-4">
         <Slider {...settings}>
-          {customers.map((customer) => (
+          {/* {customers?.map((customer :any) => (
             <div key={Math.random()} className=" ">
               <div className="m-1 shadow-lg space-y-2 rounded-3xl cursor-move shadow-[#7c5b386c] p-4 h-full">
                 <div className="relative flex justify-center">
@@ -125,7 +125,7 @@ const CustomersSays = () => {
                 </div>
               </div>
             </div>
-          ))}
+          ))} */}
         </Slider>
       </div>
     </section>

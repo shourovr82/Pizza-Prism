@@ -26,7 +26,7 @@ const PaymentTitleCell = ({ rowData, dataKey, ...props }: any) => {
 };
 
 const renderMenu = ({ onClose, left, top, className }: any, ref: any) => {
-  const handleSelect = (eventKey) => {
+  const handleSelect = () => {
     onClose();
   };
   return (
@@ -172,7 +172,7 @@ const DashboardHistoryPage = () => {
         <Table
           className="rounded-t-xl align-center"
           height={1000}
-          data={mockHistory}
+          data={mockHistory ? mockHistory : []}
           rowHeight={80}
         >
           <Column flexGrow={2} colSpan={5} align="left" verticalAlign="middle">
@@ -208,12 +208,12 @@ const DashboardHistoryPage = () => {
             </HeaderCell>
             <PaymentTitleCell dataKey="payment" />
           </Column>
-          <Column align="right" flexGrow={1} verticalAlign="middle">
+          {/* <Column align="right" flexGrow={1} verticalAlign="middle">
             <HeaderCell className="font-bold text-sm text-[#3b3b3b]">
               Option
             </HeaderCell>
             <OptionCell dataKey="payment" />
-          </Column>
+          </Column> */}
         </Table>
       </div>
     </section>
