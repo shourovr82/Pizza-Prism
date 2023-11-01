@@ -5,11 +5,13 @@ import Navbar from "@/components/layouts/navbar/Navbar";
 
 const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
+    <div
+      style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
+    >
       <Navbar />
-      {children}
+      <main style={{ flex: 1 }}> {children}</main>
       <Footer />
-    </>
+    </div>
   );
 };
 

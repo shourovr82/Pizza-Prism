@@ -8,10 +8,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <>
+    <section className="max-w-7xl mx-auto  mt-10">
       <h2 className="text-5xl  selection:text-white selection:bg-green-600">
         Home Page shafin
       </h2>
-    </>
+    </section>
   );
 }
