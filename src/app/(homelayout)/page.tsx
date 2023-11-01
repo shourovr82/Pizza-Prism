@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <h2 className="text-5xl  selection:text-white selection:bg-green-600">
-        Home Page
+        Home Page shafin
       </h2>
     </>
   );
