@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Outfit } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/lib/Providers";
 

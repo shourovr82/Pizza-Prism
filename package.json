@@ -10,11 +10,19 @@
   },
   "dependencies": {
     "@nextui-org/react": "^2.1.13",
+    "@types/react-flatpickr": "^3.8.10",
+    "@types/react-slick": "^0.23.11",
+    "dayjs": "^1.11.10",
     "framer-motion": "^10.16.4",
+    "moment": "^2.29.4",
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^4.11.0"
+    "react-flatpickr": "^3.10.13",
+    "react-hook-form": "^7.47.0",
+    "react-icons": "^4.11.0",
+    "react-slick": "^0.29.0",
+    "recharts": "^2.9.2"
   },
   "devDependencies": {
     "@types/node": "^20",

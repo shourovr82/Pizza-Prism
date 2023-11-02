@@ -1,3 +1,231 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body {
+  background-color: #fafafa;
+  user-select: none;
+  scroll-behavior: smooth;
+}
+
+.logoTitle {
+  text-transform: capitalize;
+  background: linear-gradient(to right, #eb7e09 0%, #f6c112 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bannerImg {
+  background-image: url("../Assets/Homepage/bannerImg.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.neon-loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  border-radius: 25px;
+  background-image: linear-gradient(to right, #f78708, #f8be12);
+  text-decoration: none;
+  animation: neon-loader 1s infinite alternate;
+  transition: 0.5s all;
+}
+
+.neon-loader:hover {
+  background-color: #f8be12 !important;
+  animation-play-state: paused;
+  box-shadow: 0 0 10px #f78708, 0 0 30px #f8be12, 0 0 40px #f78708;
+}
+
+.neon-view-all {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  border-radius: 25px;
+  background-image: linear-gradient(to right, #f78308, #f78308);
+  text-decoration: none;
+  animation: neon-loader 1s infinite alternate;
+  transition: 0.5s all;
+}
+
+.neon-view-all:hover {
+  background-color: #f78308 !important;
+  animation-play-state: paused;
+  box-shadow: 0 0 10px #f78708, 0 0 30px #f8be12, 0 0 40px #f78708;
+}
+
+.responsive-section {
+  width: 100%;
+  /* Full width */
+  max-width: 1232px;
+  /* Max width */
+  margin: 0 auto;
+  /* Center horizontally */
+  /* Background color */
+  box-sizing: border-box;
+  /* Include padding and border in element's total width */
+}
+
+/* Media query for medium (md) breakpoint */
+@media (max-width: 768px) {
+  .responsive-section {
+    max-width: 91%;
+  }
+}
+
+/* Media query for large (lg) breakpoint */
+@media (max-width: 1024px) {
+  .responsive-section {
+    max-width: 95%;
+  }
+}
+
+/* Media query for extra large (xl) breakpoint */
+@media (max-width: 1280px) {
+  .responsive-section {
+    max-width: 96%;
+  }
+}
+
+/* .reservationBg {
+  background-image: url('../Assets//Homepage/pizzaa.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+} */
+
+/* reservation */
+.book-now-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  background-image: linear-gradient(to right, #f78708, #f8be12);
+  text-decoration: none;
+  animation: neon-loader 1s infinite alternate;
+  transition: 0.5s all;
+}
+
+
+/* customer review */
+.slick-slide>div {
+  margin: 20px 10px 20px 10px;
+  padding: 0px;
+}
+
+/* Slider dots styling */
+.slick-dots {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  /* Adjust as needed */
+}
+
+.slick-dots li {
+  margin: 0 10px !important;
+  /* Adjust the spacing between dots */
+}
+
+.slick-dots li button {
+
+
+  /* Adjust dot size */
+  border: none;
+  background: #444;
+  /* Default dot color */
+  border-radius: 50%;
+  /* Rounded dot */
+  cursor: pointer;
+}
+
+.slick-dots li.slick-active button {
+  background: #ff9800;
+
+}
+
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #f78908;
+  border-radius: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+  background-color: #c1c8cf;
+
+}
+
+/* dashboard */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* dashboard report */
+.custom-dropdown {
+  background-color: white !important;
+}
+
+/* dashboard orders pay bills  */
+
+.pay-bills-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  border-radius: 15px;
+  background-image: linear-gradient(to right, #f78708, #f78708);
+  text-decoration: none;
+  animation: neon-loader 1s infinite alternate;
+  transition: 0.5s all;
+}
+
+.pay-bills-btn:hover {
+  background-color: #f8be12 !important;
+  animation-play-state: paused;
+  box-shadow: 0 0 10px #f78708, 0 0 10px #f8be12, 0 0 10px #f78708;
+}
+
+
+.nice-dates-navigation,
+.nice-dates-day {
+  color: #111;
+}
+
+.nice-dates-popover {
+  box-shadow: none;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  transition: none;
+}
+
+.nice-dates-day:before {
+  background-color: #ec7905 !important;
+  z-index: 1;
+}
+
+.nice-dates-day:after {
+  border: 2px solid #ec7905 !important;
+  transform: scale(0.95);
+  transition-duration: 200ms !important;
+  transition-property: transform, opacity;
+  z-index: 2;
+}

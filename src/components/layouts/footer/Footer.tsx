@@ -5,7 +5,7 @@ import { SiGithub } from "react-icons/si";
 
 const Footer = () => {
   return (
-    <section className="bg-[#14181d]  sticky bottom-0 font-sans text-sm pt-20 pb-5">
+    <section className="bg-[#14181d]  font-sans text-sm pt-20 pb-5">
       <div className="responsive-section max-w-7xl  mx-auto max-md:px-3">
         {/* footer title */}
         <div className=" max-md:flex max-md:flex-col items-center space-y-5 xl:grid  xl:grid-cols-5 ">
