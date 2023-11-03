@@ -205,27 +205,9 @@ body {
 }
 
 
-.nice-dates-navigation,
-.nice-dates-day {
-  color: #111;
-}
 
-.nice-dates-popover {
-  box-shadow: none;
-  border: 1px solid #ddd;
-  border-radius: 2px;
-  transition: none;
-}
-
-.nice-dates-day:before {
-  background-color: #ec7905 !important;
-  z-index: 1;
-}
-
-.nice-dates-day:after {
-  border: 2px solid #ec7905 !important;
-  transform: scale(0.95);
-  transition-duration: 200ms !important;
-  transition-property: transform, opacity;
-  z-index: 2;
+.instagram-icon {
+  background: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  -webkit-background-clip: text;
+  color: transparent;
 }

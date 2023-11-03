@@ -10,9 +10,6 @@ const DashboardHomePage = () => {
   return (
     <>
       <div>
-        {/* Static sidebar for desktop */}
-        {/* <Dashboard /> */}
-
         {/*  */}
         <div className="relative font-sans">
           {/* Main Layout for Dashboard */}

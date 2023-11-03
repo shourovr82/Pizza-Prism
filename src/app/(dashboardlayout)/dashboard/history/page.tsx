@@ -291,7 +291,7 @@ const DashboardHistoryPage = () => {
 
   return (
     <>
-      <section className="m-5   max-h-unit bg-white p-5 rounded-2xl">
+      <section className="m-5  relative bg-white p-5 rounded-2xl">
         {/* search and Filters */}
         <div className="grid   grid-cols-5 gap-10 items-center">
           <div className="col-span-4">
