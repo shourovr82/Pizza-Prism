@@ -192,20 +192,21 @@ const DashboardSidebar = () => {
           <Link
             href="/dashboard/settings"
             className={`   ${
-              pathname === "/dashboard/settings" && "bg-[#fef0e1]"
+              pathname?.startsWith("/dashboard/settings") && "bg-[#fef0e1]"
             }  flex flex-col    
              items-center  py-3 px-4 group rounded-xl hover:bg-[#fef0e1]`}
           >
             <span>
               <RiSettings4Fill
                 className={`${
-                  pathname === "/dashboard/settings" && "text-[#ec7905]"
+                  pathname?.startsWith("/dashboard/settings") &&
+                  "text-[#ec7905]"
                 }  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
               />
             </span>
             <h4
               className={`${
-                pathname === "/dashboard/settings" && "text-[#ec7905]"
+                pathname?.startsWith("/dashboard/settings") && "text-[#ec7905]"
               }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
             >
               Settings
