@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaTools } from "react-icons/fa";
+import { FaTools, FaUserAstronaut } from "react-icons/fa";
 import { FaEye, FaHotel } from "react-icons/fa6";
 import { HiShieldCheck } from "react-icons/hi";
 import { HiMiniLanguage } from "react-icons/hi2";
@@ -82,6 +82,19 @@ const DashboardSettingsSidebar = () => {
         <HiShieldCheck
           className={`${
             pathname === "/dashboard/settings/security" && "!text-[#ec7905]"
+          }  group-hover:text-[#ec7905] text-[#939393] `}
+          size={20}
+        />
+      ),
+    },
+    {
+      href: "/dashboard/settings/user-management",
+      title: "User Management",
+      icon: (
+        <FaUserAstronaut
+          className={`${
+            pathname === "/dashboard/settings/user-management" &&
+            "!text-[#ec7905]"
           }  group-hover:text-[#ec7905] text-[#939393] `}
           size={20}
         />
