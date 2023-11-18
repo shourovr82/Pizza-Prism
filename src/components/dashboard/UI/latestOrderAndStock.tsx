@@ -4,7 +4,7 @@ import StockOut from "./stockOut";
 
 const LatestOrderAndStock = () => {
   return (
-    <div className="grid grid-cols-2 gap-5 items-center mt-5">
+    <div className=" space-y-5 items-center mt-5">
       <LatestOrder />
       <StockOut />
     </div>

@@ -366,7 +366,7 @@ const DashboardHistoryPage = () => {
                     <TableCell align="justify">
                       {columnKey === "actions" ? (
                         <div className="relative flex items-center ">
-                          <Tooltip content="Details">
+                          <Tooltip content="Details" closeDelay={0}>
                             <Button
                               isIconOnly
                               variant="light"
@@ -376,7 +376,7 @@ const DashboardHistoryPage = () => {
                               <FiEye />
                             </Button>
                           </Tooltip>
-                          <Tooltip content="Edit user">
+                          <Tooltip content="Edit user" closeDelay={0}>
                             <Button
                               isIconOnly
                               variant="light"
@@ -386,7 +386,11 @@ const DashboardHistoryPage = () => {
                               <RiEdit2Line />
                             </Button>
                           </Tooltip>
-                          <Tooltip color="danger" content="Delete user">
+                          <Tooltip
+                            color="danger"
+                            content="Delete user"
+                            closeDelay={0}
+                          >
                             <Button
                               isIconOnly
                               variant="light"

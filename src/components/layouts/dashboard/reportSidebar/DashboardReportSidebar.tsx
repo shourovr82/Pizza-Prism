@@ -14,11 +14,23 @@ const DashboardReportSidebar = () => {
   const allLinks = [
     {
       href: "/dashboard/report",
-      title: "Sales Summary",
+      title: "Overall Summary",
       icon: (
         <TbChartDonutFilled
           className={`${
             pathname === "/dashboard/report" && "!text-[#ec7905]"
+          }  group-hover:text-[#ec7905] text-[#939393] `}
+          size={20}
+        />
+      ),
+    },
+    {
+      href: "/dashboard/report/sales-summary",
+      title: "Sales Summary",
+      icon: (
+        <TbChartDonutFilled
+          className={`${
+            pathname === "/dashboard/report/sales-summary" && "!text-[#ec7905]"
           }  group-hover:text-[#ec7905] text-[#939393] `}
           size={20}
         />

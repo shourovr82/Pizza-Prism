@@ -22,7 +22,7 @@ const DashboardSidebar = () => {
   const pathname = usePathname();
 
   return (
-    <div className="flex flex-col lg:justify-between md:py-5 lg:py-2  font-sans h-full">
+    <div className="flex flex-col lg:justify-between shadow-xl rounded-r-xl  md:py-5 lg:py-2  font-sans h-full">
       <div className=" md:space-y-5 lg:space-y-3">
         <div className="flex justify-center">
           <span className=" bg-[#fdefe0]  p-2.5 rounded-2xl">
@@ -233,15 +233,20 @@ const DashboardSidebar = () => {
             </DropdownTrigger>
             <DropdownMenu aria-label="Action event example">
               <DropdownItem
-                key="new"
+                key="profile setting"
                 as={Link}
                 href="/dashboard/profile-setting"
               >
-                {" "}
                 Personal Information
               </DropdownItem>
-              <DropdownItem key="copy">Login Setting</DropdownItem>
-              <DropdownItem key="edit">Password Setting</DropdownItem>
+              <DropdownItem
+                key="login and password setting"
+                as={Link}
+                href="/dashboard/login-password"
+              >
+                Login & Password Setting
+              </DropdownItem>
+
               <DropdownItem
                 key="delete"
                 className="text-red-600 hover:!text-white font-semibold py-2"

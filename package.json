@@ -2,20 +2,30 @@
   "name": "pizza-prism",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Shafinur Islam",
+    "email": "shafinur512@gmail.com",
+    "url": "https://github.com/shourovr82"
+  },
+
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --check .",
+    "format:fix": "prettier --write --list-different ."
   },
   "dependencies": {
     "@nextui-org/react": "^2.1.13",
     "@types/react-flatpickr": "^3.8.10",
     "@types/react-slick": "^0.23.11",
     "dayjs": "^1.11.10",
+    "eslint-config-prettier": "^9.0.0",
     "framer-motion": "^10.16.4",
     "moment": "^2.29.4",
     "next": "14.0.1",
+    "prettier": "^3.1.0",
     "react": "^18",
     "react-dom": "^18",
     "react-flatpickr": "^3.10.13",
@@ -28,6 +38,7 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.11.0",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.1",

@@ -1,8 +1,10 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import Image from "next/image";
 import photo from "@/Assets/Homepage/isolated-pizza-with-mushrooms-olives_219193-8149.jpg";
 import { HiMinus } from "react-icons/hi";
 import { AiOutlinePlus } from "react-icons/ai";
 import { Button } from "@nextui-org/react";
+
 const DiscoverMenuSection = () => {
   const menus = [
     "Pizza",
