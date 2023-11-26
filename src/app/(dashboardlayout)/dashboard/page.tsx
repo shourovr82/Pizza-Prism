@@ -1,3 +1,4 @@
+import HeroSection from "@/components/dashboard/dashboardHome/SwipeAbleTabs";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -9,6 +10,9 @@ const DashboardHomePage = () => {
   return (
     <>
       <div>dashboard Home page</div>
+      <div>
+        <HeroSection />
+      </div>
     </>
   );
 };

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import React from "react";
@@ -26,7 +27,7 @@ import { BiDotsVertical } from "react-icons/bi";
 import { BsThreeDots } from "react-icons/bs";
 import { HiDotsVertical } from "react-icons/hi";
 
-const statusColorMap = {
+const statusColorMap: any = {
   active: "success",
   paused: "danger",
   vacation: "warning",
@@ -36,9 +37,9 @@ const INITIAL_VISIBLE_COLUMNS = ["name", "role", "status", "actions"];
 
 export default function DeviceActivity() {
   const [filterValue, setFilterValue] = React.useState("");
-  const [selectedKeys, setSelectedKeys] = React.useState(new Set([]));
+  const [selectedKeys, setSelectedKeys] = React.useState<any>(new Set([]));
   const [visibleColumns, setVisibleColumns] = React.useState(
-    new Set(INITIAL_VISIBLE_COLUMNS)
+    new Set(INITIAL_VISIBLE_COLUMNS),
   );
   const [statusFilter, setStatusFilter] = React.useState("all");
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -51,7 +52,7 @@ export default function DeviceActivity() {
     if (visibleColumns === ("all" as any)) return columns;
 
     return columns.filter((column) =>
-      Array.from(visibleColumns).includes(column.uid)
+      Array.from(visibleColumns).includes(column.uid),
     );
   }, [visibleColumns]);
 
@@ -60,7 +61,7 @@ export default function DeviceActivity() {
 
     if (hasSearchFilter) {
       filteredUsers = filteredUsers.filter((user) =>
-        user.name.toLowerCase().includes(filterValue.toLowerCase())
+        user.name.toLowerCase().includes(filterValue.toLowerCase()),
       );
     }
     if (
@@ -68,7 +69,7 @@ export default function DeviceActivity() {
       Array.from(statusFilter).length !== statusOptions.length
     ) {
       filteredUsers = filteredUsers.filter((user) =>
-        Array.from(statusFilter).includes(user.status)
+        Array.from(statusFilter).includes(user.status),
       );
     }
 
@@ -84,7 +85,7 @@ export default function DeviceActivity() {
     return filteredItems.slice(start, end);
   }, [page, filteredItems, rowsPerPage]);
 
-  const renderCell = React.useCallback((user, columnKey) => {
+  const renderCell = React.useCallback((user: any, columnKey: any) => {
     const cellValue = user[columnKey];
 
     switch (columnKey) {
@@ -152,7 +153,7 @@ export default function DeviceActivity() {
     }
   }, [page]);
 
-  const onRowsPerPageChange = React.useCallback((e) => {
+  const onRowsPerPageChange = React.useCallback((e: any) => {
     setRowsPerPage(Number(e.target.value));
     setPage(1);
   }, []);
@@ -178,13 +179,7 @@ export default function DeviceActivity() {
         </div>
       </div>
     );
-  }, [
-    filterValue,
-    statusFilter,
-    visibleColumns,
-    onRowsPerPageChange,
-    users.length,
-  ]);
+  }, [onRowsPerPageChange]);
 
   const bottomContent = React.useMemo(() => {
     return (
@@ -223,7 +218,14 @@ export default function DeviceActivity() {
         </div>
       </div>
     );
-  }, [selectedKeys, items.length, page, pages]);
+  }, [
+    selectedKeys,
+    filteredItems.length,
+    page,
+    pages,
+    onPreviousPage,
+    onNextPage,
+  ]);
 
   return (
     <Table

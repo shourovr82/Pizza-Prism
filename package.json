@@ -7,7 +7,6 @@
     "email": "shafinur512@gmail.com",
     "url": "https://github.com/shourovr82"
   },
-
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -23,6 +22,7 @@
     "dayjs": "^1.11.10",
     "eslint-config-prettier": "^9.0.0",
     "framer-motion": "^10.16.4",
+    "keen-slider": "^6.8.6",
     "moment": "^2.29.4",
     "next": "14.0.1",
     "prettier": "^3.1.0",
@@ -36,8 +36,10 @@
   },
   "devDependencies": {
     "@types/node": "^20",
+    "@types/owl.carousel": "^2.3.6",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@types/react-swipeable-views": "^0.13.5",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "autoprefixer": "^10.0.1",
     "eslint": "^8",

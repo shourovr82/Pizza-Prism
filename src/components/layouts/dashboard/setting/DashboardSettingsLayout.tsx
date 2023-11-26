@@ -1,4 +1,4 @@
-import DashboardSettingsSidebar from "@/components/Shared/DashboardSettingsSidebar";
+import DashboardSettingsSidebar from "./DashboardSettingsSidebar";
 
 export default function DashboardSettingsLayout({
   children,

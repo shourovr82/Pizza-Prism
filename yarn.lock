@@ -1812,6 +1812,13 @@
   resolved "https://registry.yarnpkg.com/@types/flat/-/flat-5.0.4.tgz#d8262918655d942cb0b79f09020240d5ff668557"
   integrity sha512-Qy8SOE+x5F40jebCj4vPoA/Y6J2Zd6h9ihMPYP8U8//dDEOK4Yu0ShOTKqEmWPR+4AdV4sls/VCaR6azEFvKKg==
 
+"@types/jquery@*":
+  version "3.5.29"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.5.29.tgz#3c06a1f519cd5fc3a7a108971436c00685b5dcea"
+  integrity sha512-oXQQC9X9MOPRrMhPHHOsXqeQDnWeCDT3PelUIg/Oy8FAbzSZtFHRjc7IpbfFVmpLtJ+UOoywpRsuO5Jxjybyeg==
+  dependencies:
+    "@types/sizzle" "*"
+
 "@types/json-schema@^7.0.12":
   version "7.0.15"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.15.tgz#596a1747233694d50f6ad8a7869fcb6f56cf5841"
@@ -1869,6 +1876,13 @@
   dependencies:
     undici-types "~5.26.4"
 
+"@types/owl.carousel@^2.3.6":
+  version "2.3.6"
+  resolved "https://registry.yarnpkg.com/@types/owl.carousel/-/owl.carousel-2.3.6.tgz#391565bada4bbd3a7ff5c526d725e349c7e0d709"
+  integrity sha512-03y/DrsCgIWknURbjuals2VNZJMyIF5athoOfsm13KpGY7EacoKZ5ENJ0MZtxtnsaol9Tgmk7t6rQ68EOBjaWg==
+  dependencies:
+    "@types/jquery" "*"
+
 "@types/prop-types@*":
   version "15.7.9"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.9.tgz#b6f785caa7ea1fe4414d9df42ee0ab67f23d8a6d"
@@ -1896,6 +1910,13 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-swipeable-views@^0.13.5":
+  version "0.13.5"
+  resolved "https://registry.yarnpkg.com/@types/react-swipeable-views/-/react-swipeable-views-0.13.5.tgz#f9dc947b7424d34cade864185bfa831a818a45f6"
+  integrity sha512-ni6WjO7gBq2xB2Y/ZiRdQOgjGOxIik5ow2s7xKieDq8DxsXTdV46jJslSBVK2yoIJHf6mG3uqNTwxwgzbXRRzg==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react@*", "@types/react@^18":
   version "18.2.34"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-18.2.34.tgz#aed20f19473721ba328feb99d1ec3307ebc1a8dd"
@@ -1914,6 +1935,11 @@
   version "7.5.5"
   resolved "https://registry.yarnpkg.com/@types/semver/-/semver-7.5.5.tgz#deed5ab7019756c9c90ea86139106b0346223f35"
   integrity sha512-+d+WYC1BxJ6yVOgUgzK8gWvp5qF8ssV5r4nsDcZWKRWcDQLQ619tvWAxJQYGgBrO1MnLJC7a5GtiYsAoQ47dJg==
+
+"@types/sizzle@*":
+  version "2.3.8"
+  resolved "https://registry.yarnpkg.com/@types/sizzle/-/sizzle-2.3.8.tgz#518609aefb797da19bf222feb199e8f653ff7627"
+  integrity sha512-0vWLNK2D5MT9dg0iOo8GlKguPAU02QjmZitPEsXRuJXU/OGIOt9vT9Fc26wtYuavLxtO45v9PGleoL9Z0k1LHg==
 
 "@typescript-eslint/eslint-plugin@^6.11.0":
   version "6.11.0"
@@ -3530,6 +3556,11 @@ json5@^1.0.2:
     array.prototype.flat "^1.3.1"
     object.assign "^4.1.4"
     object.values "^1.1.6"
+
+keen-slider@^6.8.6:
+  version "6.8.6"
+  resolved "https://registry.yarnpkg.com/keen-slider/-/keen-slider-6.8.6.tgz#17bb7b219860f291a5ea5fde4496b737bf407a83"
+  integrity sha512-dcEQ7GDBpCjUQA8XZeWh3oBBLLmyn8aoeIQFGL/NTVkoEOsmlnXqA4QykUm/SncolAZYGsEk/PfUhLZ7mwMM2w==
 
 keyv@^4.5.3:
   version "4.5.4"

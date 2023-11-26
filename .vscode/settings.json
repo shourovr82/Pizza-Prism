@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["nextui", "Shafinur"],
+  "cSpell.words": ["nextui", "Shafinur", "swipeable"],
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
