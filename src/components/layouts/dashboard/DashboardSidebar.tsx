@@ -8,14 +8,7 @@ import { RiSettings4Fill } from "react-icons/ri";
 import { GoClockFill } from "react-icons/go";
 import { IoNotificationsSharp } from "react-icons/io5";
 import { BsHouseDoorFill } from "react-icons/bs";
-import {
-  Avatar,
-  Button,
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger,
-} from "@nextui-org/react";
+import { Avatar, Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@nextui-org/react";
 import { usePathname } from "next/navigation";
 
 const DashboardSidebar = () => {
@@ -33,49 +26,31 @@ const DashboardSidebar = () => {
           {/* dashboard home */}
           <Link
             href="/dashboard"
-            className={`   ${
-              pathname === "/dashboard" && "bg-[#fef0e1]"
-            }  flex flex-col    
+            className={`   ${pathname === "/dashboard" && "bg-[#fef0e1]"}  flex flex-col    
              items-center py-3 px-3 group rounded-xl hover:bg-[#fef0e1]`}
           >
             <span>
               <BsHouseDoorFill
-                className={`${
-                  pathname === "/dashboard" && "text-[#ec7905]"
-                }  group-hover:text-[#ec7905] text-[#7f7f7f] text-lg`}
+                className={`${pathname === "/dashboard" && "text-[#ec7905]"}  group-hover:text-[#ec7905] text-[#7f7f7f] text-lg`}
                 size={16}
               />
             </span>
-            <h4
-              className={`${
-                pathname === "/dashboard" && "text-[#ec7905]"
-              }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
-            >
-              Home
-            </h4>
+            <h4 className={`${pathname === "/dashboard" && "text-[#ec7905]"}  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}>Home</h4>
           </Link>
 
           {/* dashboard table */}
           <Link
-            href="/dashboard/table"
+            href="/dashboard/tables"
             className={`   ${
-              pathname === "/dashboard/table" && "bg-[#fef0e1]"
+              pathname === "/dashboard/tables" && "bg-[#fef0e1]"
             }  flex flex-col items-center  py-3 px-3.5 group rounded-xl hover:bg-[#fef0e1]`}
           >
             <span>
               <BiSolidCategoryAlt
-                className={`${
-                  pathname === "/dashboard/table" && "text-[#ec7905]"
-                }  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
+                className={`${pathname === "/dashboard/tables" && "text-[#ec7905]"}  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
               />
             </span>
-            <h4
-              className={`${
-                pathname === "/dashboard/table" && "text-[#ec7905]"
-              }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
-            >
-              Table
-            </h4>
+            <h4 className={`${pathname === "/dashboard/tables" && "text-[#ec7905]"}  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}>Table</h4>
           </Link>
           {/* dashboard menu */}
           <Link
@@ -85,39 +60,23 @@ const DashboardSidebar = () => {
             }  flex flex-col items-center  py-3 px-3 group rounded-xl hover:bg-[#fef0e1]`}
           >
             <span>
-              <BiFoodMenu
-                className={`${
-                  pathname === "/dashboard/menu" && "text-[#ec7905]"
-                }  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
-              />
+              <BiFoodMenu className={`${pathname === "/dashboard/menu" && "text-[#ec7905]"}  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`} />
             </span>
-            <h4
-              className={`${
-                pathname === "/dashboard/menu" && "text-[#ec7905]"
-              }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
-            >
-              Menu
-            </h4>
+            <h4 className={`${pathname === "/dashboard/menu" && "text-[#ec7905]"}  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}>Menu</h4>
           </Link>
           {/* dashboard orders */}
           <Link
             href="/dashboard/orders"
             className={`   ${
-              pathname === "/dashboard/orders" && "bg-[#fef0e1]"
+              pathname?.startsWith("/dashboard/orders") && "bg-[#fef0e1]"
             }  flex flex-col items-center  py-3 px-3 group rounded-xl hover:bg-[#fef0e1]`}
           >
             <span>
               <FaShoppingCart
-                className={`${
-                  pathname === "/dashboard/orders" && "text-[#ec7905]"
-                }  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
+                className={`${pathname?.startsWith("/dashboard/orders") && "text-[#ec7905]"}  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
               />
             </span>
-            <h4
-              className={`${
-                pathname === "/dashboard/orders" && "text-[#ec7905]"
-              }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
-            >
+            <h4 className={`${pathname?.startsWith("/dashboard/orders") && "text-[#ec7905]"}  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}>
               Orders
             </h4>
           </Link>
@@ -130,18 +89,10 @@ const DashboardSidebar = () => {
           >
             <span>
               <GoClockFill
-                className={`${
-                  pathname === "/dashboard/history" && "text-[#ec7905]"
-                }  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
+                className={`${pathname === "/dashboard/history" && "text-[#ec7905]"}  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
               />
             </span>
-            <h4
-              className={`${
-                pathname === "/dashboard/history" && "text-[#ec7905]"
-              }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
-            >
-              History
-            </h4>
+            <h4 className={`${pathname === "/dashboard/history" && "text-[#ec7905]"}  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}>History</h4>
           </Link>
           {/* dashboard report */}
           <Link
@@ -151,64 +102,35 @@ const DashboardSidebar = () => {
             }  flex flex-col items-center  py-3 px-3 group rounded-xl hover:bg-[#fef0e1]`}
           >
             <span>
-              <FaChartPie
-                className={`${
-                  pathname === "/dashboard/report" && "text-[#ec7905]"
-                }  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
-              />
+              <FaChartPie className={`${pathname === "/dashboard/report" && "text-[#ec7905]"}  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`} />
             </span>
-            <h4
-              className={`${
-                pathname === "/dashboard/report" && "text-[#ec7905]"
-              }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
-            >
-              Report
-            </h4>
+            <h4 className={`${pathname === "/dashboard/report" && "text-[#ec7905]"}  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}>Report</h4>
           </Link>
           {/* dashboard alert */}
           <Link
             href="/dashboard/alert"
-            className={`   ${
-              pathname === "/dashboard/alert" && "bg-[#fef0e1]"
-            }  flex flex-col    
+            className={`   ${pathname === "/dashboard/alert" && "bg-[#fef0e1]"}  flex flex-col    
              items-center  py-3 px-4 group rounded-xl hover:bg-[#fef0e1]`}
           >
             <span>
               <IoNotificationsSharp
-                className={`${
-                  pathname === "/dashboard/alert" && "text-[#ec7905]"
-                }  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
+                className={`${pathname === "/dashboard/alert" && "text-[#ec7905]"}  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
               />
             </span>
-            <h4
-              className={`${
-                pathname === "/dashboard/alert" && "text-[#ec7905]"
-              }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
-            >
-              Alert
-            </h4>
+            <h4 className={`${pathname === "/dashboard/alert" && "text-[#ec7905]"}  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}>Alert</h4>
           </Link>
           {/* dashboard settings */}
           <Link
             href="/dashboard/settings"
-            className={`   ${
-              pathname?.startsWith("/dashboard/settings") && "bg-[#fef0e1]"
-            }  flex flex-col    
+            className={`   ${pathname?.startsWith("/dashboard/settings") && "bg-[#fef0e1]"}  flex flex-col    
              items-center  py-3 px-4 group rounded-xl hover:bg-[#fef0e1]`}
           >
             <span>
               <RiSettings4Fill
-                className={`${
-                  pathname?.startsWith("/dashboard/settings") &&
-                  "text-[#ec7905]"
-                }  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
+                className={`${pathname?.startsWith("/dashboard/settings") && "text-[#ec7905]"}  group-hover:text-[#ec7905] text-lg text-[#7f7f7f]`}
               />
             </span>
-            <h4
-              className={`${
-                pathname?.startsWith("/dashboard/settings") && "text-[#ec7905]"
-              }  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}
-            >
+            <h4 className={`${pathname?.startsWith("/dashboard/settings") && "text-[#ec7905]"}  group-hover:text-[#ec7905] text-xs text-[#7f7f7f]`}>
               Settings
             </h4>
           </Link>
@@ -218,40 +140,19 @@ const DashboardSidebar = () => {
         <div className="flex items-center justify-center gap-4">
           <Dropdown type="menu">
             <DropdownTrigger>
-              <Button
-                isIconOnly
-                color="default"
-                radius="full"
-                aria-label="Like"
-              >
-                <Avatar
-                  isBordered
-                  color="secondary"
-                  src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-                />
+              <Button isIconOnly color="default" radius="full" aria-label="Like">
+                <Avatar isBordered color="secondary" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
               </Button>
             </DropdownTrigger>
             <DropdownMenu aria-label="Action event example">
-              <DropdownItem
-                key="profile setting"
-                as={Link}
-                href="/dashboard/profile-setting"
-              >
+              <DropdownItem key="profile setting" as={Link} href="/dashboard/profile-setting">
                 Personal Information
               </DropdownItem>
-              <DropdownItem
-                key="login and password setting"
-                as={Link}
-                href="/dashboard/login-password"
-              >
+              <DropdownItem key="login and password setting" as={Link} href="/dashboard/login-password">
                 Login & Password Setting
               </DropdownItem>
 
-              <DropdownItem
-                key="delete"
-                className="text-red-600 hover:!text-white font-semibold py-2"
-                color="warning"
-              >
+              <DropdownItem key="delete" className="text-red-600 hover:!text-white font-semibold py-2" color="warning">
                 Log Out
               </DropdownItem>
             </DropdownMenu>

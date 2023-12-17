@@ -1,7 +1,9 @@
 "use client";
 import { Button, ScrollShadow, Tab, Tabs } from "@nextui-org/react";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { BsCashCoin } from "react-icons/bs";
+import { FaPlus } from "react-icons/fa";
 import { FaRegCreditCard } from "react-icons/fa6";
 import { IoWallet } from "react-icons/io5";
 
@@ -132,29 +134,45 @@ const DashboardOrdersPage = () => {
       foodImage: "cake",
     },
   ];
+  const navigate = useRouter();
   return (
     <section className="p-5  grid grid-cols-5 gap-5">
       <div className="col-span-3 ">
         {/* filters */}
-        <div className="flex gap-5">
-          <Button
-            onClick={() => setActiveFilter(1)}
-            size="sm"
-            className={`${
-              activeFilter === 1 && "!text-[#ef9336] !bg-[#fef0e1]  "
-            } rounded-full text-sm font-semibold text-[#afafaf] bg-[#ebebeb] `}
-          >
-            On - process
-          </Button>
-          <Button
-            onClick={() => setActiveFilter(2)}
-            size="sm"
-            className={`${
-              activeFilter === 2 && "!text-[#ef9336] !bg-[#fef0e1]  "
-            } rounded-full text-sm font-semibold text-[#afafaf] bg-[#ebebeb] `}
-          >
-            Completed
-          </Button>
+        <div className="flex justify-between items-center">
+          {/*  */}
+          <div className="flex gap-5">
+            <Button
+              onClick={() => setActiveFilter(1)}
+              size="sm"
+              className={`${activeFilter === 1 && "!text-[#ef9336] !bg-[#fef0e1]  "} rounded-full text-sm font-semibold text-[#afafaf] bg-[#ebebeb] `}
+            >
+              On - process
+            </Button>
+            <Button
+              onClick={() => setActiveFilter(2)}
+              size="sm"
+              className={`${activeFilter === 2 && "!text-[#ef9336] !bg-[#fef0e1]  "} rounded-full text-sm font-semibold text-[#afafaf] bg-[#ebebeb] `}
+            >
+              Completed
+            </Button>
+          </div>
+          {/* new order */}
+          <div>
+            <Button
+              onClick={() => {
+                navigate.push("/dashboard/orders/add-order");
+              }}
+              size="sm"
+              variant="shadow"
+              className="text-white"
+              color="warning"
+              radius="full"
+              startContent={<FaPlus color="#fff" size={15} />}
+            >
+              Add Order
+            </Button>
+          </div>
         </div>
 
         {/* order card */}
@@ -165,23 +183,15 @@ const DashboardOrdersPage = () => {
               className="flex hover:border border border-transparent bg-white hover:border-[#ee8924] hover:shadow-xl duration-300 ease-in-out transition-all hover:shadow-[#f9f2ea] rounded-2xl py-3 px-5 justify-between"
             >
               <div className="space-y-1">
-                <h2 className="text-[#363636] font-bold">
-                  Orders: {order.orderNumber}
-                </h2>
-                <h4 className="font-semibold text-[#363636] text-sm">
-                  Table : {order.tableNumber}
-                </h4>
+                <h2 className="text-[#363636] font-bold">Orders: {order.orderNumber}</h2>
+                <h4 className="font-semibold text-[#363636] text-sm">Table : {order.tableNumber}</h4>
                 <p className="text-[#9b9b9b] text-sm">Qta : {order.quantity}</p>
               </div>
               <div className="text-end flex flex-col justify-between">
                 <h2 className="text-[#8f8f8f] ">{order.orderTime}</h2>
                 <div className="flex gap-2 items-center">
-                  <h4 className="text-[#333333] font-bold text-lg">
-                    ${order.totalCost}
-                  </h4>
-                  <p className="bg-[#54ca92] text-white px-2.5 rounded-xl py-[4px] text-[13px] font-semibold">
-                    {order.orderType}
-                  </p>
+                  <h4 className="text-[#333333] font-bold text-lg">${order.totalCost}</h4>
+                  <p className="bg-[#54ca92] text-white px-2.5 rounded-xl py-[4px] text-[13px] font-semibold">{order.orderType}</p>
                 </div>
               </div>
             </div>
@@ -201,10 +211,7 @@ const DashboardOrdersPage = () => {
           </div>
         </div>
         {/* food card */}
-        <ScrollShadow
-          hideScrollBar
-          className="space-y-2 divide-y  overflow-y-scroll no-scrollbar h-[50vh]  mt-3"
-        >
+        <ScrollShadow hideScrollBar className="space-y-2 divide-y  overflow-y-scroll no-scrollbar h-[50vh]  mt-3">
           {orderFoods?.map((food) => (
             <div key={Math.random()} className="flex items-center gap-5">
               <div>img</div>
@@ -212,23 +219,16 @@ const DashboardOrdersPage = () => {
                 <div>
                   <h2 className=" font-semibold">{food.foodName}</h2>
                   <p className="text-sm ">
-                    <span className="text-[#afafaf]"> Note:</span>{" "}
-                    <span className="text-[#4a4a4a]">
-                      {food.specialInstructions}
-                    </span>
+                    <span className="text-[#afafaf]"> Note:</span> <span className="text-[#4a4a4a]">{food.specialInstructions}</span>
                   </p>
                 </div>
                 <div className="flex justify-between items-center">
                   <div className="flex gap-6">
-                    <h4 className="font-medium text-[#4a4a4a]">
-                      ${food.price}
-                    </h4>
+                    <h4 className="font-medium text-[#4a4a4a]">${food.price}</h4>
                     <p className="text-[#afafaf]">x {food.quantity}</p>
                   </div>
                   <div>
-                    <h2 className="font-bold text-lg text-[#333333]">
-                      ${food.totalPrice}
-                    </h2>
+                    <h2 className="font-bold text-lg text-[#333333]">${food.totalPrice}</h2>
                   </div>
                 </div>
               </div>
@@ -256,12 +256,7 @@ const DashboardOrdersPage = () => {
           <div>
             <h2 className="text-xl font-bold text-[#333333]">Payment Method</h2>
             <div className="flex w-full select-none flex-col mt-1">
-              <Tabs
-                aria-label="Options"
-                color="warning"
-                variant="solid"
-                fullWidth
-              >
+              <Tabs aria-label="Options" color="warning" variant="solid" fullWidth>
                 <Tab
                   key="cash"
                   title={
@@ -293,9 +288,7 @@ const DashboardOrdersPage = () => {
             </div>
             <div>
               <Button className="pay-bills-btn w-full  mt-3">
-                <span className="text-white font-semibold text-normal">
-                  Pay Bills
-                </span>
+                <span className="text-white font-semibold text-normal">Pay Bills</span>
               </Button>
             </div>
           </div>

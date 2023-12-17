@@ -1,7 +1,7 @@
 {
   "extends": [
+    "plugin:@typescript-eslint/recommended", // Make sure this comes first
     "next/core-web-vitals",
-    "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
   "parser": "@typescript-eslint/parser",
@@ -28,7 +28,21 @@
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react/display-name": "off",
-    "react/jsx-uses-react": "off",
-    "react/jsx-uses-vars": "error"
+    "react/jsx-uses-react": "warn",
+    "react/jsx-uses-vars": "error",
+    // Enforce a consistent return style for multiline arrow functions
+    "arrow-body-style": ["error", "as-needed"],
+    // Enforce consistent brace style for blocks
+    "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+    // Enforce a maximum line length
+    "max-len": ["error", { "code": 300 }],
+    // Require or disallow newline at the end of files
+    "eol-last": ["error", "always"],
+    // Enforce consistent spacing before and after keywords
+    "keyword-spacing": "error",
+    // Require or disallow spacing between function identifiers and their invocations
+    "func-call-spacing": ["error", "never"],
+    // Enforce consistent spacing inside braces
+    "object-curly-spacing": ["error", "always"]
   }
 }
