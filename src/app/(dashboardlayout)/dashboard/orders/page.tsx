@@ -161,7 +161,7 @@ const DashboardOrdersPage = () => {
           <div>
             <Button
               onClick={() => {
-                navigate.push("/dashboard/orders/add-order");
+                navigate.push("/dashboard/orders/add-order?tab=1");
               }}
               size="sm"
               variant="shadow"
