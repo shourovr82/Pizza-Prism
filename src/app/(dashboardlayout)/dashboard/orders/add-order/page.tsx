@@ -1,5 +1,5 @@
 import AddOrderTabs from "@/components/dashboard/orders/AddOrderTabs";
-import OrderTables from "@/components/dashboard/orders/OrderTables";
+
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

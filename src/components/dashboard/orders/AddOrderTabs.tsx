@@ -3,6 +3,7 @@
 import { Button, Chip } from "@nextui-org/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import OrderTables from "./OrderTables";
+import ChooseCustomer from "./ChooseCustomer";
 
 const AddOrderTabs = () => {
   const navigate = useRouter();
@@ -10,7 +11,7 @@ const AddOrderTabs = () => {
 
   return (
     <>
-      <div className="flex items-center border-b py-1.5 bg-white  ">
+      <div className="flex items-center border-b py-1.5 sticky top-0 bg-white  ">
         {/* Step 1: Choose a Table */}
         <div className="flex  gap-3 items-center">
           <div className="">
@@ -81,7 +82,27 @@ const AddOrderTabs = () => {
           </div>
         </div>
       </div>
+      {/* if null */}
+      <div>
+        {tabParams === null && (
+          <div className="h-[90vh] flex justify-center  items-center">
+            <Button
+              onClick={() => {
+                navigate.push("/dashboard/orders/add-order?tab=1");
+              }}
+              variant="shadow"
+              size="lg"
+              className="text-white"
+              color="warning"
+            >
+              Add Order
+            </Button>
+          </div>
+        )}
+      </div>
+      {/* if tab = 1 */}
       <div>{tabParams === "1" && <OrderTables />}</div>
+      <div>{tabParams === "2" && <ChooseCustomer />}</div>
     </>
   );
 };
