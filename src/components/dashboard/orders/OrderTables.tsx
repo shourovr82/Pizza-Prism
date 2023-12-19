@@ -75,7 +75,7 @@ const OrderTables = () => (
           </div>
           {/* table 17 */}
           <div className="col-span-2 border  ">
-            {/* Table T14 */}
+            {/* Table T17 */}
             <div className="col-span-1 ">
               {/* Top */}
               <div className="flex justify-center gap-5 items-center">
@@ -94,7 +94,7 @@ const OrderTables = () => (
                 <div className="col-span-5 w-full flex justify-center">
                   <div className="bg-white border rounded-full shadow-2xl shadow-black/10 flex justify-center items-center w-full h-[130px]">
                     <div>
-                      <p className="p-3 bg-[#fcf3c9] text-[#eda71f] font-medium rounded-full">T14</p>
+                      <p className="p-3 bg-[#fcf3c9] text-[#eda71f] font-medium rounded-full">T17</p>
                     </div>
                   </div>
                 </div>
@@ -115,7 +115,7 @@ const OrderTables = () => (
           </div>
           {/* table */}
           <div className="col-span-2 grid grid-cols-2">
-            {/* Table T13 */}
+            {/* Table T20 */}
             <div className="col-span-1 border">
               {/* Top */}
               <div className="flex justify-center gap-5 items-center">
@@ -128,7 +128,7 @@ const OrderTables = () => (
                 <div className="col-span-5 w-full flex justify-center">
                   <div className="bg-white border rounded-full shadow-2xl shadow-black/10 flex justify-center items-center w-[130px] h-[130px]">
                     <div>
-                      <p className="p-3 bg-[#ebfcd0] text-green-600 font-medium rounded-full">T13</p>
+                      <p className="px-2.5 py-3 bg-[#b69bff8c] text-[#6b49ff] font-medium rounded-full">T20</p>
                     </div>
                   </div>
                 </div>
@@ -140,8 +140,8 @@ const OrderTables = () => (
                 <div className="w-[50px] h-[20px] border bg-white rounded-full" />
               </div>
             </div>
-            {/* Table T13 */}
-            <div className="col-span-1 border">
+            {/* Table T21 */}
+            <div className="col-span-1 border ">
               {/* Top */}
               <div className="flex justify-center gap-5 items-center">
                 <div className="w-[50px] h-[20px] border bg-white rounded-full" />
@@ -155,7 +155,7 @@ const OrderTables = () => (
                 <div className="col-span-5 w-full flex justify-center">
                   <div className="bg-white border rounded-full shadow-2xl shadow-black/10 flex justify-center items-center w-[130px] h-[130px]">
                     <div>
-                      <p className="p-3 bg-[#ebfcd0] text-green-600 font-medium rounded-full">T13</p>
+                      <p className="px-2.5 py-3 bg-[#ebfcd0] text-green-600 font-medium rounded-full">T22</p>
                     </div>
                   </div>
                 </div>
@@ -250,7 +250,7 @@ const OrderTables = () => (
               <div className="w-[50px] h-[20px] border bg-white rounded-full" />
             </div>
           </div>
-          {/* table 18 */}
+          {/* table 22 */}
           <div className="col-span-2 border  ">
             {/* Table T18 */}
 
@@ -271,7 +271,7 @@ const OrderTables = () => (
               <div className="col-span-5 w-full flex justify-center">
                 <div className="bg-white border rounded-full shadow-2xl shadow-black/10 flex justify-center items-center w-full h-[130px]">
                   <div>
-                    <p className="p-3 bg-[#fcf3c9] text-[#eda71f] font-medium rounded-full">T18</p>
+                    <p className="px-2.5 py-3 bg-[#fcf3c9] text-[#eda71f] font-medium rounded-full">T22</p>
                   </div>
                 </div>
               </div>
@@ -360,9 +360,9 @@ const OrderTables = () => (
               </div>
             </div>{" "}
           </div>
-          {/* table 18 */}
+          {/* table 19 */}
           <div className="col-span-2 border  ">
-            {/* Table T18 */}
+            {/* Table T19 */}
 
             {/* Top */}
             <div className="flex justify-center gap-5 items-center">
@@ -381,7 +381,7 @@ const OrderTables = () => (
               <div className="col-span-5 w-full flex justify-center">
                 <div className="bg-white border rounded-full shadow-2xl shadow-black/10 flex justify-center items-center w-full h-[130px]">
                   <div>
-                    <p className="p-3 bg-[#fcf3c9] text-[#eda71f] font-medium rounded-full">T18</p>
+                    <p className="p-3 bg-[#fcf3c9] text-[#eda71f] font-medium rounded-full">T19</p>
                   </div>
                 </div>
               </div>
@@ -402,7 +402,7 @@ const OrderTables = () => (
 
           {/* table */}
           <div className="col-span-2 grid grid-cols-2">
-            {/* Table T13 */}
+            {/* Table T23 */}
             <div className="col-span-1 border">
               {/* Top */}
               <div className="flex justify-center gap-5 items-center">
@@ -411,27 +411,23 @@ const OrderTables = () => (
 
               {/* Middle */}
               <div className="grid grid-cols-7 gap-2 p-2">
-                <div className="col-span-1 space-y-2 flex flex-col items-center justify-center">
-                  <div className="w-[20px] h-[50px] border bg-white rounded-full" />
-                </div>
+                <div className="col-span-1 space-y-2 flex flex-col items-center justify-center"></div>
                 <div className="col-span-5 w-full flex justify-center">
                   <div className="bg-white border rounded-full shadow-2xl shadow-black/10 flex justify-center items-center w-[130px] h-[130px]">
                     <div>
-                      <p className="p-3 bg-[#ebfcd0] text-green-600 font-medium rounded-full">T13</p>
+                      <p className="px-2.5 py-3 bg-[#82ffc5a6] text-green-600 font-medium rounded-full">T23</p>
                     </div>
                   </div>
                 </div>
-                <div className="col-span-1 space-y-2 flex flex-col items-center justify-center">
-                  <div className="w-[20px] h-[50px] border bg-white rounded-full" />
-                </div>
+                <div className="col-span-1 space-y-2 flex flex-col items-center justify-center"></div>
               </div>
 
               {/* Bottom */}
               <div className="flex justify-center gap-5 items-center">
                 <div className="w-[50px] h-[20px] border bg-white rounded-full" />
               </div>
-            </div>
-            {/* Table T13 */}
+            </div>{" "}
+            {/* Table T24 */}
             <div className="col-span-1 border">
               {/* Top */}
               <div className="flex justify-center gap-5 items-center">
@@ -440,15 +436,19 @@ const OrderTables = () => (
 
               {/* Middle */}
               <div className="grid grid-cols-7 gap-2 p-2">
-                <div className="col-span-1 space-y-2 flex flex-col items-center justify-center"></div>
+                <div className="col-span-1 space-y-2 flex flex-col items-center justify-center">
+                  <div className="w-[20px] h-[50px] border bg-white rounded-full" />
+                </div>
                 <div className="col-span-5 w-full flex justify-center">
                   <div className="bg-white border rounded-full shadow-2xl shadow-black/10 flex justify-center items-center w-[130px] h-[130px]">
                     <div>
-                      <p className="p-3 bg-[#ebfcd0] text-green-600 font-medium rounded-full">T13</p>
+                      <p className="px-2.5 py-3 bg-[#a6b3ff88] text-[#6a80ff] font-medium rounded-full">T24</p>
                     </div>
                   </div>
                 </div>
-                <div className="col-span-1 space-y-2 flex flex-col items-center justify-center"></div>
+                <div className="col-span-1 space-y-2 flex flex-col items-center justify-center">
+                  <div className="w-[20px] h-[50px] border bg-white rounded-full" />
+                </div>
               </div>
 
               {/* Bottom */}

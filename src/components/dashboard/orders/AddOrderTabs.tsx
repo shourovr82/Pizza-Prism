@@ -4,6 +4,7 @@ import { Button, Chip } from "@nextui-org/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import OrderTables from "./OrderTables";
 import ChooseCustomer from "./ChooseCustomer";
+import AddOrderSelectMenu from "./AddOrderSelectMenu";
 
 const AddOrderTabs = () => {
   const navigate = useRouter();
@@ -103,6 +104,7 @@ const AddOrderTabs = () => {
       {/* if tab = 1 */}
       <div>{tabParams === "1" && <OrderTables />}</div>
       <div>{tabParams === "2" && <ChooseCustomer />}</div>
+      <div>{tabParams === "3" && <AddOrderSelectMenu />}</div>
     </>
   );
 };
