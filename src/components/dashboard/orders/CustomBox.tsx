@@ -1,51 +1,39 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from "react";
-import { useCheckbox, Chip, VisuallyHidden, tv } from "@nextui-org/react";
-import { BiCheck } from "react-icons/bi";
+import { Checkbox, Link, User, Chip, cn } from "@nextui-org/react";
 
-const checkbox = tv({
-  slots: {
-    base: "border-default hover:bg-default-200",
-    content: "text-default-500",
-  },
-  variants: {
-    isSelected: {
-      true: {
-        base: "border-primary bg-primary hover:bg-primary-500 hover:border-primary-500",
-        content: "text-primary-foreground pl-1",
-      },
-    },
-    isFocusVisible: {
-      true: {
-        base: "outline-none ring-2 ring-focus ring-offset-2 ring-offset-background",
-      },
-    },
-  },
-});
-
-export const CustomCheckbox = (props) => {
-  const { children, isSelected, isFocusVisible, getBaseProps, getLabelProps, getInputProps } = useCheckbox({
-    ...props,
-  });
-
-  const styles = checkbox({ isSelected, isFocusVisible });
-
+export const CustomCheckbox = ({ userData }: any) => {
   return (
-    <label {...getBaseProps()}>
-      <VisuallyHidden>
-        <input {...getInputProps()} />
-      </VisuallyHidden>
-      <Chip
-        classNames={{
-          base: styles.base(),
-          content: styles.content(),
-        }}
-        color="primary"
-        startContent={isSelected ? <BiCheck className="ml-1" /> : null}
-        variant="faded"
-        {...getLabelProps()}
-      >
-        {children ? children : isSelected ? "Enabled" : "Disabled"}
-      </Chip>
-    </label>
+    <Checkbox
+      aria-label={userData?.userData?.user?.name}
+      classNames={{
+        base: cn(
+          "inline-flex max-w-md w-full bg-content1 m-0",
+          "hover:bg-content2 items-center justify-start",
+          "cursor-pointer rounded-lg gap-2 p-4 border-2 border-transparent",
+          "data-[selected=true]:border-primary",
+        ),
+        label: "w-full",
+      }}
+      value={userData?.value}
+    >
+      <div className="w-full flex justify-between gap-2">
+        <User
+          avatarProps={{ size: "md", src: userData?.user?.avatar }}
+          description={
+            <Link isExternal href={userData?.user?.url} size="sm">
+              @{userData?.user?.username}
+            </Link>
+          }
+          name={userData?.user?.name}
+        />
+        <div className="flex flex-col items-end gap-1">
+          <span className="text-tiny text-default-500">{userData?.user?.role}</span>
+          <Chip color={userData?.statusColor} size="sm" variant="flat">
+            {userData?.user?.status}
+          </Chip>
+        </div>
+      </div>
+    </Checkbox>
   );
 };

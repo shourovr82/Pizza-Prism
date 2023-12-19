@@ -1,7 +1,8 @@
 "use client";
-import { CheckboxGroup, Select, SelectItem, Selection } from "@nextui-org/react";
+import { Button, Input, Select, SelectItem, Selection } from "@nextui-org/react";
+import { useRouter } from "next/navigation";
+
 import { useState } from "react";
-import { CustomCheckbox } from "./CustomBox";
 
 export const tableSlot = [
   { label: "T1", value: "T1" },
@@ -49,7 +50,8 @@ export const timeSlot = [
 
 const ChooseCustomer = () => {
   const [values, setValues] = useState<Selection>(new Set(["T1", "T9"]));
-  const [groupSelected, setGroupSelected] = useState([]);
+
+  const router = useRouter();
 
   return (
     <section className=" m-3 p-5 rounded-lg bg-white border">
@@ -107,16 +109,32 @@ const ChooseCustomer = () => {
           <h2 className="text-sm font-semibold">Guest</h2>
         </div>
         {/*  */}
-        <div>
-          <CheckboxGroup className="gap-1" label="Select amenities" orientation="horizontal" value={groupSelected} onChange={setGroupSelected}>
-            <CustomCheckbox value="wifi">Wifi</CustomCheckbox>
-            <CustomCheckbox value="tv">TV</CustomCheckbox>
-            <CustomCheckbox value="kitchen">Kitchen</CustomCheckbox>
-            <CustomCheckbox value="parking">Parking</CustomCheckbox>
-            <CustomCheckbox value="pool">Pool</CustomCheckbox>
-            <CustomCheckbox value="gym">Gym</CustomCheckbox>
-          </CheckboxGroup>
+        <div className="grid grid-cols-8 gap-3 ">
+          <Button fullWidth={true}>1</Button>
+          <Button fullWidth={true}>2</Button>
+          <Button fullWidth={true}>3</Button>
+          <Button fullWidth={true}>4</Button>
+          <Button fullWidth={true}>5</Button>
+          <Button fullWidth={true}>6</Button>
+          <Button fullWidth={true}>7</Button>
+          <Button fullWidth={true}>8</Button>
         </div>
+      </div>
+      <div className="mt-5">
+        <Input fullWidth={true} type="number" min={1} max={20} placeholder="Custom total guest" />
+      </div>
+      <div className="mt-5 flex justify-end">
+        <Button
+          onClick={() => {
+            router.push("/dashboard/orders/add-order?tab=3");
+          }}
+          variant="shadow"
+          className="text-white font-medium  "
+          color="warning"
+          size="lg"
+        >
+          Next
+        </Button>
       </div>
     </section>
   );
