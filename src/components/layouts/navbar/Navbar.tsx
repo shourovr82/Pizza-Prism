@@ -1,13 +1,6 @@
 "use client";
 
-import {
-  Button,
-  DropdownItem,
-  DropdownTrigger,
-  Dropdown,
-  DropdownMenu,
-  Avatar,
-} from "@nextui-org/react";
+import { Button, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar } from "@nextui-org/react";
 import NavLink from "next/link";
 
 import { FaPhoneFlip } from "react-icons/fa6";
@@ -19,9 +12,7 @@ const Navigation = () => {
     <div className=" bg-[#15181b] shadow-xl sticky top-0 z-50 shadow-[#1415129c] w-full">
       <div className="bg-transparent  max-w-7xl mx-auto flex justify-between   items-center py-2">
         <div>
-          <h1 className=" text-white text-xl  selection:bg-[#f78908] selection:text-white  ">
-            Pizza Prism
-          </h1>
+          <h1 className=" text-white text-xl  selection:bg-[#f78908] selection:text-white  ">Pizza Prism</h1>
         </div>
         <div className="hidden sm:flex  items-center gap-6">
           <Link href="/" className="font-sans text-[15px] text-[#d1710c]">
@@ -47,65 +38,38 @@ const Navigation = () => {
                 base: "gap-4",
               }}
             >
-              <DropdownItem
-                key="autoscaling"
-                description="ACME scales apps to meet user demand, automagically, based on load."
-              >
+              <DropdownItem key="autoscaling" description="ACME scales apps to meet user demand, automagically, based on load.">
                 Specials and Coupons
               </DropdownItem>
-              <DropdownItem
-                key="usage_metrics"
-                description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where."
-              >
+              <DropdownItem key="usage_metrics" description="Real-time metrics to debug issues. Slow query added? We’ll show you exactly where.">
                 Contact
               </DropdownItem>
-              <DropdownItem
-                key="production_ready"
-                description="ACME runs on ACME, join us and others serving requests at web scale."
-              >
+              <DropdownItem key="production_ready" description="ACME runs on ACME, join us and others serving requests at web scale.">
                 Production Ready
               </DropdownItem>
-              <DropdownItem
-                key="99_uptime"
-                description="Applications stay on the grid with high availability and high uptime guarantees."
-              >
+              <DropdownItem key="99_uptime" description="Applications stay on the grid with high availability and high uptime guarantees.">
                 +99% Uptime
               </DropdownItem>
-              <DropdownItem
-                key="supreme_support"
-                description="Overcome any challenge with a supporting team ready to respond."
-              >
+              <DropdownItem key="supreme_support" description="Overcome any challenge with a supporting team ready to respond.">
                 +Supreme Support
               </DropdownItem>
             </DropdownMenu>
           </Dropdown>
 
-          <NavLink
-            href="/news"
-            className="text-[#d8d9d9] text-[15px]   font-sans font-[400]"
-          >
+          <NavLink href="/news" className="text-[#d8d9d9] text-[15px]   font-sans font-[400]">
             Specials <span className="max-lg:hidden"> and Coupons</span>
           </NavLink>
 
-          <Link
-            href="#"
-            className="text-[#d8d9d9] text-[15px]   font-sans font-[400]"
-          >
+          <Link href="#" className="text-[#d8d9d9] text-[15px]   font-sans font-[400]">
             Contact
           </Link>
 
-          <NavLink
-            href="/dashboard"
-            className="text-[#d8d9d9] text-[15px]   font-sans font-[400]"
-          >
+          <NavLink href="/dashboard" className="text-[#d8d9d9] text-[15px]   font-sans font-[400]">
             Dashboard
           </NavLink>
         </div>
         <div className="items-center gap-4 flex">
-          <button
-            className="font-sans border-2 p-2 rounded-full border-[#dd9710] relative text-[15px] text-[#dd9710]"
-            aria-current="page"
-          >
+          <button className="font-sans border-2 p-2 rounded-full border-[#dd9710] relative text-[15px] text-[#dd9710]" aria-current="page">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -275,47 +239,25 @@ const Navigation = () => {
                 />
               </g>
             </svg>{" "}
-            <span className="absolute -top-1 font-semibold py-0.5 bg-white px-1.5 rounded-full text-xs -right-1.5">
-              2
-            </span>
+            <span className="absolute -top-1 font-semibold py-0.5 bg-white px-1.5 rounded-full text-xs -right-1.5">2</span>
           </button>
 
-          <button
-            className="font-sans border-2 p-2 rounded-full border-[#dd9710] relative text-[15px] text-[#dd9710]"
-            aria-current="page"
-          >
+          <button className="font-sans border-2 p-2 rounded-full border-[#dd9710] relative text-[15px] text-[#dd9710]" aria-current="page">
             <BsHandbagFill size={20} />
-            <span className="absolute -top-1 font-semibold py-0.5 bg-white px-1.5 rounded-full text-xs -right-1.5">
-              2
-            </span>
+            <span className="absolute -top-1 font-semibold py-0.5 bg-white px-1.5 rounded-full text-xs -right-1.5">2</span>
           </button>
 
-          <button
-            className="font-sans border-2 p-2 rounded-full border-[#dd9710] text-[15px] text-[#dd9710]"
-            aria-current="page"
-          >
+          <button className="font-sans border-2 p-2 rounded-full border-[#dd9710] text-[15px] text-[#dd9710]" aria-current="page">
             <FaPhoneFlip size={20} />
           </button>
 
           <Dropdown type="menu">
             <DropdownTrigger>
-              <Button
-                isIconOnly
-                color="default"
-                radius="full"
-                aria-label="Like"
-              >
-                <Avatar
-                  isBordered
-                  color="secondary"
-                  src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
-                />
+              <Button isIconOnly color="default" radius="full" aria-label="Like">
+                <Avatar isBordered color="secondary" src="https://i.pravatar.cc/150?u=a042581f4e29026704d" />
               </Button>
             </DropdownTrigger>
-            <DropdownMenu
-              aria-label="Action event example"
-              onAction={(key) => alert(key)}
-            >
+            <DropdownMenu aria-label="Action event example" onAction={(key) => alert(key)}>
               <DropdownItem key="new">New file</DropdownItem>
               <DropdownItem key="copy">Copy link</DropdownItem>
               <DropdownItem key="edit">Edit file</DropdownItem>

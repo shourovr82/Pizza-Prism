@@ -1,10 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { Button, Checkbox, CheckboxGroup, Chip, User, cn } from "@nextui-org/react";
+import { Button, Card, CardBody, CardFooter, CheckboxGroup, Image } from "@nextui-org/react";
 import { useRouter } from "next/navigation";
 
 import { useState } from "react";
-import Link from "next/link";
 
 export const tableSlot = [
   { label: "T1", value: "T1" },
@@ -116,6 +115,18 @@ const AddOrderSelectMenu = () => {
       },
       statusColor: "danger",
     },
+    {
+      value: "bobJohnson",
+      user: {
+        name: "Bob Johnson",
+        avatar: "https://example.com/bobjohnson.jpg",
+        username: "bobjohnson",
+        url: "https://twitter.com/bobjohnson",
+        role: "QA Engineer",
+        status: "Offline",
+      },
+      statusColor: "danger",
+    },
     // Add more objects as needed
   ];
 
@@ -127,45 +138,30 @@ const AddOrderSelectMenu = () => {
         <p className="text-[#90919c]">{`There's just few steps left to complete your purchase.`}</p>
       </div>
       {/* main */}
-      <div className="flex flex-col gap-1 w-full">
+      <div className="flex flex-col  mt-5 gap-1 w-full">
         <CheckboxGroup
-          label="Select employees"
+          className="gap-1"
+          orientation="horizontal"
           value={groupSelected}
+          // @ts-ignore
           onChange={setGroupSelected}
-          classNames={{
-            base: "w-full",
-          }}
         >
-          <div className="grid grid-cols-3 gap-5">
-            {usersArray?.map((userData) => (
+          <div className="grid grid-cols-6 gap-5  w-full">
+            {usersArray?.map((single) => (
               <div key={Math.random()}>
-                <Checkbox
-                  aria-label={userData?.user?.name}
-                  classNames={{
-                    base: cn(
-                      "inline-flex max-w-md w-full bg-content1 m-0",
-                      "hover:bg-content2 items-center justify-start",
-                      "cursor-pointer rounded-lg gap-2 p-4 border-2 border-transparent",
-                      "data-[selected=true]:border-primary",
-                    ),
-                    label: "w-full",
-                  }}
-                  value={userData?.value}
-                >
-                  <div className="w-full flex justify-between gap-2">
-                    <User
-                      avatarProps={{ size: "md", src: userData?.user?.avatar }}
-                      description={<Link href={userData?.user?.url}>@{userData?.user?.username}</Link>}
-                      name={userData?.user?.name}
-                    />
-                    <div className="flex flex-col items-end gap-1">
-                      <span className="text-tiny text-default-500">{userData?.user?.role}</span>
-                      <Chip color={userData?.statusColor as any} size="sm" variant="flat">
-                        {userData?.user?.status}
-                      </Chip>
-                    </div>
-                  </div>
-                </Checkbox>
+                <div className="w-full flex justify-between gap-2">
+                  <Card shadow="sm" className="w-full" isPressable onPress={() => console.log("item pressed")}>
+                    <CardBody className="overflow-visible p-0">
+                      <Image shadow="sm" radius="lg" width="100%" alt={"item.title"} className="w-full object-cover h-[140px]" src={"item.img"} />
+                    </CardBody>
+                    <CardFooter className="text-small ">
+                      <div>
+                        <b>{"item.title"}</b>
+                        <p className="text-default-500 text-start ">200$</p>
+                      </div>
+                    </CardFooter>
+                  </Card>
+                </div>
               </div>
             ))}
           </div>
@@ -181,7 +177,7 @@ const AddOrderSelectMenu = () => {
           color="warning"
           size="lg"
         >
-          Next
+          Book & Order
         </Button>
       </div>
     </section>

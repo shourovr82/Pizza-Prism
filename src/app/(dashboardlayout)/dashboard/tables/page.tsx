@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
-import { Input } from "@nextui-org/react";
 import { Tabs, Tab, Chip } from "@nextui-org/react";
-import { LuSearch } from "react-icons/lu";
 import React, { useState } from "react";
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/themes/material_orange.css";
