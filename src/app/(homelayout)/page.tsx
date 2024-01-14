@@ -46,7 +46,7 @@ export default function Home() {
           },
         }}
       >
-        <div className="bannerImg selection:bg-[#f78908] selection:text-white    flex justify-center">
+        <div className=" selection:bg-[#f78908] selection:text-white    flex justify-center">
           <HeroSection />
         </div>
       </motion.div>

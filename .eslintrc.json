@@ -35,7 +35,7 @@
     // Enforce consistent brace style for blocks
     "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
     // Enforce a maximum line length
-    "max-len": ["error", { "code": 300 }],
+    // "max-len": ["error", { "code": 300 }],
     // Require or disallow newline at the end of files
     "eol-last": ["error", "always"],
     // Enforce consistent spacing before and after keywords

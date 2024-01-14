@@ -1,6 +1,6 @@
 "use client";
 
-import { FaCreativeCommonsZero, FaShoppingCart } from "react-icons/fa";
+import { FaShoppingCart } from "react-icons/fa";
 import Link from "next/link";
 import { BiFoodMenu, BiSolidCategoryAlt } from "react-icons/bi";
 import { FaChartPie } from "react-icons/fa6";
@@ -10,6 +10,8 @@ import { IoNotificationsSharp } from "react-icons/io5";
 import { BsHouseDoorFill } from "react-icons/bs";
 import { Avatar, Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from "@nextui-org/react";
 import { usePathname } from "next/navigation";
+import dashboardLogo from "@/assets/logo/dashboard-logo.svg";
+import Image from "next/image";
 
 const DashboardSidebar = () => {
   const pathname = usePathname();
@@ -18,9 +20,9 @@ const DashboardSidebar = () => {
     <div className="flex flex-col lg:justify-between shadow-xl rounded-r-xl  md:py-5 lg:py-2  font-sans h-full">
       <div className=" md:space-y-5 lg:space-y-3">
         <div className="flex justify-center">
-          <span className=" bg-[#fdefe0]  p-2.5 rounded-2xl">
-            <FaCreativeCommonsZero className="text-2xl" />
-          </span>
+          <Link href="/">
+            <Image className="w-16 border border-[#ff5900] shadow-inner shadow-[#ff5900] rounded-full p-2" src={dashboardLogo} alt="shourovr82" />
+          </Link>
         </div>
         <div className="flex flex-col md:gap-3  lg:gap-2 justify-center items-center ">
           {/* dashboard home */}
